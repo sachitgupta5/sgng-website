@@ -77,21 +77,21 @@ function AboutTeam() {
               <Users className="h-8 w-8 text-primary-600" />
             </div>
             <h2 className="font-serif text-3xl font-bold text-gray-900 sm:text-4xl">
-              A Team of Distinguished Professionals
+              A Team of Distinguished Pros
             </h2>
             <div className="mx-auto mt-2 h-1 w-16 rounded bg-accent-500" />
             <p className="mt-6 text-lg leading-relaxed text-gray-600">
-              Providing expert monetary solutions and counsel to businesses of
-              all sizes. Our team comprises experienced Chartered Accountants,
-              tax consultants, auditors, and financial advisors who bring a
-              wealth of knowledge and a collaborative approach to every
-              engagement.
+              We provide an all-inclusive agglomeration of specially designed and
+              multidisciplinary expert services that meet the requirements of
+              every single need of our clients. Our company of Chartered
+              Accountants constitutes a group of expert skill set that is
+              equipped to provide excellent monetary solutions and counsel.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-gray-600">
-              We believe that great outcomes are the result of great people
-              working together. Each member of our team is committed to
-              continuous learning, professional excellence, and delivering value
-              that goes beyond numbers.
+              We are defined by our drive to make a difference. Good
+              isn&apos;t the best. We aim for the skies at whatever we do –
+              from helping businesses understand their true potential to
+              magnifying their profits.
             </p>
           </div>
         </div>

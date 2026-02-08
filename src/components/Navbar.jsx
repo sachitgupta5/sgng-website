@@ -29,15 +29,15 @@ const industryLinks = [
 const serviceLinks = [
   "Business Setup Advisory",
   "Transaction Advisory",
-  "Taxation & Regulatory",
-  "Audit & Assurance",
+  "Taxation & Regulatory Services",
+  "Audit & Assurance Services",
   "Non-Core Process Outsourcing",
-  "Forensic Accounting",
-  "GST Services",
+  "Forensic Accounting and Fraud Detection",
+  "GST Related Services",
   "IND-AS Implementation",
-  "Internal Financial Controls",
+  "Internal Financial Controls (IFC)",
   "Internal Audit",
-  "Bookkeeping & Accounting",
+  "Book Keeping & Accounting Services",
   "Physical Verification",
   "Startup Services",
 ].map((name) => ({
@@ -214,20 +214,31 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 h-16 lg:h-20">
         {/* ---- Logo ---- */}
         <Link to="/" className="flex items-center gap-2 shrink-0">
-          <span
-            className={`text-xl lg:text-2xl font-bold tracking-tight transition-colors duration-300 ${
-              isScrolled ? "text-primary-600" : "text-white"
-            }`}
-          >
-            SGNG
-          </span>
-          <span
-            className={`hidden sm:inline text-sm lg:text-base font-medium transition-colors duration-300 ${
-              isScrolled ? "text-gray-500" : "text-white/70"
-            }`}
-          >
-            &amp; Associates
-          </span>
+          <div className="flex flex-col">
+            <div className="flex items-center gap-1.5">
+              <span
+                className={`text-xl lg:text-2xl font-bold tracking-tight transition-colors duration-300 ${
+                  isScrolled ? "text-primary-600" : "text-white"
+                }`}
+              >
+                SGNG
+              </span>
+              <span
+                className={`hidden sm:inline text-sm lg:text-base font-medium transition-colors duration-300 ${
+                  isScrolled ? "text-gray-500" : "text-white/70"
+                }`}
+              >
+                &amp; Associates
+              </span>
+            </div>
+            <span
+              className={`hidden sm:block text-[10px] tracking-wider uppercase transition-colors duration-300 ${
+                isScrolled ? "text-gray-400" : "text-white/50"
+              }`}
+            >
+              Serving Globally...
+            </span>
+          </div>
         </Link>
 
         {/* ---- Desktop navigation ---- */}

@@ -34,21 +34,21 @@ const values = [
     title: "Integrity",
     subtitle: "Highest Professional Standards",
     description:
-      "We uphold unwavering transparency, ethical conduct, and accountability in every engagement. Our clients trust us because our commitment to doing the right thing is non-negotiable.",
+      "Upholding the highest level of professional standards and reputation for integrity, we platform a culture of transparency and responsibility.",
   },
   {
     icon: Award,
     title: "Passion for Excellence",
     subtitle: "Exceeding Client Expectations",
     description:
-      "We go above and beyond to deliver solutions that are thorough, timely, and tailored to each client's unique needs. Mediocrity has no place in our practice.",
+      "Utmost expertise and excellence of the services we offer is part of our corporate DNA. We strive to succeed by exceeding client expectations.",
   },
   {
     icon: Users,
     title: "Collaborative Growth",
     subtitle: "Continuous Development",
     description:
-      "We believe in the power of working together — with our clients, our teams, and the broader community. Diverse perspectives drive innovation and sustainable growth.",
+      "We believe in continuous development and collaborative growth. Capitalizing from our cultural and ideological diversity.",
   },
 ];
 
@@ -103,12 +103,15 @@ export default function Home() {
         </div>
 
         <div className="relative mx-auto flex min-h-[600px] max-w-7xl flex-col items-center justify-center px-6 py-28 text-center lg:py-36">
+          <p className="animate-fade-in-up mb-4 text-sm font-semibold uppercase tracking-widest text-accent-500">
+            Serving Globally...
+          </p>
           <h1 className="animate-fade-in-up max-w-4xl font-serif text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Where Chartered Accountancy Meets Technology
+            SGNG &amp; Associates — Chartered Accountants
           </h1>
 
           <p className="animate-fade-in-up animation-delay-200 mt-6 max-w-2xl text-lg leading-relaxed text-primary-200 opacity-0 sm:text-xl">
-            Tech-enabled CA firm serving clients across India &amp; UAE with expert accounting, auditing, taxation, and compliance services.
+            Tech-enabled CA firm serving clients across India &amp; UAE. Providing a comprehensive range of financial services.
           </p>
 
           <div className="animate-fade-in-up animation-delay-400 mt-10 flex flex-col gap-4 opacity-0 sm:flex-row">
@@ -160,17 +163,14 @@ export default function Home() {
               </h2>
               <div className="mt-6 space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  <strong className="text-primary-800">SGNG &amp; Associates</strong> is a team of proficient Chartered Accountants headquartered in Delhi, with offices across major Indian cities. We combine deep domain expertise with modern technology to deliver solutions that are accurate, timely, and insightful.
-                </p>
-                <p>
-                  Our comprehensive suite of services spans accounting, auditing, taxation, regulatory compliance, and business setup advisory — empowering businesses of every scale to focus on growth while we handle the numbers.
+                  We are a team of proficient and dedicated chartered accountants based in <strong className="text-primary-800">New Delhi</strong> as well as other major cities in India. We typically handle all the branches of accounting and auditing including accounts outsourcing, Business taxation, corporate compliance, company formation in India, starting a business in India, registration of foreign companies, taxation of expatriates, etc.
                 </p>
                 <p>
                   Serving a diverse clientele across <strong className="text-primary-800">India and the UAE</strong>, we pride ourselves on building lasting relationships founded on trust, transparency, and tangible results.
                 </p>
               </div>
               <Link
-                to="/about"
+                to="/about/vision"
                 className="mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-primary-600 transition hover:text-primary-800"
               >
                 Learn more about us
@@ -319,11 +319,11 @@ export default function Home() {
           <TrendingUp className="mb-6 h-10 w-10 text-accent-500" />
 
           <h2 className="max-w-3xl font-serif text-3xl font-bold text-white sm:text-4xl">
-            A Team of Distinguished Professionals
+            A Team of Distinguished Pros
           </h2>
 
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-primary-200">
-            Behind every successful financial strategy is a team that understands the nuances. Our seasoned Chartered Accountants, tax specialists, and advisory professionals deliver expert monetary solutions tailored to your business goals.
+            We provide an all-inclusive agglomeration of specially designed and multidisciplinary expert services that meet the requirements of every single need of our clients. Our company of Chartered Accountants constitutes a group of expert skill set that is equipped to provide excellent monetary solutions and counsel. We are defined by our drive to make a difference. Good isn&apos;t the best. We aim for the skies at whatever we do – from helping businesses understand their true potential to magnifying their profits.
           </p>
 
           <Link

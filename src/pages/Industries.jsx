@@ -17,55 +17,55 @@ const industries = [
     name: "Restaurants",
     icon: UtensilsCrossed,
     description:
-      "Complete financial management, GST compliance, and inventory accounting for restaurant businesses.",
+      "Specialized accounting and compliance for restaurant chains and food businesses.",
   },
   {
     name: "Transport",
     icon: Truck,
     description:
-      "Specialized accounting, fleet management reporting, and regulatory compliance for transport operators.",
+      "Tax planning and regulatory services for logistics and transport companies.",
   },
   {
     name: "Travel & Tourism",
     icon: Plane,
     description:
-      "Financial planning, foreign exchange management, and tax optimization for travel businesses.",
+      "Financial advisory for travel agencies, tour operators, and hospitality.",
   },
   {
     name: "Manufacturing",
     icon: Factory,
     description:
-      "Cost accounting, inventory valuation, excise compliance, and financial reporting for manufacturers.",
+      "Comprehensive solutions for manufacturing units and industrial enterprises.",
   },
   {
     name: "Forex",
     icon: DollarSign,
     description:
-      "Expert handling of foreign exchange transactions, FEMA compliance, and international trade accounting.",
+      "Regulatory compliance and advisory for foreign exchange businesses.",
   },
   {
     name: "Malls / Societies",
     icon: Building,
     description:
-      "Comprehensive accounting, audit, and compliance services for malls and housing societies.",
+      "Facility management accounting and compliance for malls and housing societies.",
   },
   {
     name: "Companies",
     icon: Briefcase,
     description:
-      "Full-spectrum corporate accounting, compliance, and advisory services for companies of all sizes.",
+      "Corporate advisory, compliance, and secretarial services.",
   },
   {
     name: "Retail Trading",
     icon: ShoppingCart,
     description:
-      "Point-of-sale integration, inventory management, and tax compliance for retail businesses.",
+      "Accounting and tax solutions for retail businesses.",
   },
   {
     name: "Banking",
     icon: Landmark,
     description:
-      "Specialized audit, regulatory compliance, and financial reporting for banking institutions.",
+      "Specialized services for banking and financial institutions.",
   },
 ];
 

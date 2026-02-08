@@ -62,14 +62,14 @@ function AboutVision() {
                 Our Vision
               </span>
               <h2 className="mt-4 font-serif text-3xl font-bold text-gray-900 sm:text-4xl">
-                Where We Are Headed
+                &ldquo;Seeing invisible, achieving impossible&rdquo;
               </h2>
               <div className="mt-2 h-1 w-16 rounded bg-accent-500" />
               <p className="mt-6 text-lg leading-relaxed text-gray-600">
-                To be a leading tech-enabled chartered accountancy firm,
-                delivering innovative and reliable financial solutions that
-                empower businesses to achieve sustainable growth across India
-                and the UAE.
+                Our vision is to raise benchmarks with every assignment by
+                imparting knowledge with a goal to provide timely deliverable
+                which makes us victorious in achieving client&apos;s satisfaction
+                adding to SGNG &amp; Associates as a professional firm.
               </p>
             </div>
           </div>
@@ -90,14 +90,13 @@ function AboutVision() {
                 Our Mission
               </span>
               <h2 className="mt-4 font-serif text-3xl font-bold text-gray-900 sm:text-4xl">
-                What Drives Us Every Day
+                &ldquo;Let ideas transform into innovation&rdquo;
               </h2>
               <div className="mt-2 h-1 w-16 rounded bg-accent-500" />
               <p className="mt-6 text-lg leading-relaxed text-gray-600">
-                To provide comprehensive, technology-driven professional
-                services with the highest standards of integrity, fostering
-                collaborative growth and exceeding client expectations through
-                expert financial guidance.
+                Our mission is to provide comprehensive professional services
+                which clients refer to their associates, employees boast upon,
+                competitors acknowledge and set as standards for themselves.
               </p>
             </div>
           </div>

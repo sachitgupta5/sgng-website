@@ -20,91 +20,91 @@ const services = [
     title: 'Business Setup Advisory',
     icon: Building2,
     description:
-      'Expert guidance for company formation, registration, and compliance setup across India and UAE.',
+      'As entry strategy specialists, we understand that setting up business in a complex Indian jurisdiction can be challenging. With over a decade of experience, our project management service supports every stage of your business setting up.',
     color: 'bg-blue-100 text-blue-600',
   },
   {
     title: 'Transaction Advisory',
     icon: ArrowRightLeft,
     description:
-      'Strategic advisory for mergers, acquisitions, valuations, and due diligence processes.',
+      'Expert M&A, due diligence, and deal structuring services.',
     color: 'bg-emerald-100 text-emerald-600',
   },
   {
     title: 'Taxation & Regulatory Services',
     icon: FileText,
     description:
-      'Comprehensive tax planning, compliance, and regulatory advisory for direct and indirect taxes.',
+      'Comprehensive tax planning, compliance, and regulatory advisory.',
     color: 'bg-amber-100 text-amber-600',
   },
   {
     title: 'Audit & Assurance Services',
     icon: ClipboardCheck,
     description:
-      'Statutory audit, internal audit, and assurance services ensuring financial integrity.',
+      'Statutory audits, internal audits, and assurance services.',
     color: 'bg-violet-100 text-violet-600',
   },
   {
     title: 'Non-Core Process Outsourcing',
     icon: Settings,
     description:
-      'Outsource non-core functions to focus on your business growth and core competencies.',
+      'Outsourcing of accounting, payroll, and administrative functions.',
     color: 'bg-rose-100 text-rose-600',
   },
   {
-    title: 'Forensic Accounting & Fraud Detection',
+    title: 'Forensic Accounting and Fraud Detection',
     icon: Search,
     description:
-      'Specialized investigation services for fraud detection, prevention, and dispute resolution.',
+      'Fraud investigation, forensic audits, and financial crime detection.',
     color: 'bg-red-100 text-red-600',
   },
   {
     title: 'GST Related Services',
     icon: Receipt,
     description:
-      'Complete GST compliance including registration, returns, refunds, and advisory services.',
+      'GST registration, compliance, return filing, and advisory.',
     color: 'bg-teal-100 text-teal-600',
   },
   {
     title: 'IND-AS Implementation',
     icon: BookOpen,
     description:
-      'Seamless transition to Indian Accounting Standards with expert implementation support.',
+      'Indian Accounting Standards implementation and compliance.',
     color: 'bg-indigo-100 text-indigo-600',
   },
   {
     title: 'Internal Financial Controls (IFC)',
     icon: ShieldCheck,
     description:
-      'Design and implementation of robust internal financial control frameworks.',
+      'Designing and implementing robust internal control systems.',
     color: 'bg-sky-100 text-sky-600',
   },
   {
     title: 'Internal Audit',
     icon: Eye,
     description:
-      'Risk-based internal audit services to strengthen governance and operational efficiency.',
+      'Risk-based internal audits and process improvement.',
     color: 'bg-orange-100 text-orange-600',
   },
   {
     title: 'Book Keeping & Accounting Services',
     icon: Calculator,
     description:
-      'Accurate and timely bookkeeping, accounting, and financial reporting services.',
+      'Day-to-day bookkeeping, financial statements, and MIS reporting.',
     color: 'bg-cyan-100 text-cyan-600',
   },
   {
     title: 'Physical Verification',
     icon: Package,
     description:
-      'Systematic physical verification of assets, inventory, and fixed assets.',
+      'Fixed asset verification, inventory audits, and stock verification.',
     color: 'bg-lime-100 text-lime-600',
   },
   {
     title: 'Startup Services',
     icon: Rocket,
     description:
-      'End-to-end support for startups including incorporation, funding advisory, and compliance.',
+      'End-to-end support for startups including compliance, funding, and advisory.',
     color: 'bg-fuchsia-100 text-fuchsia-600',
   },
 ];
