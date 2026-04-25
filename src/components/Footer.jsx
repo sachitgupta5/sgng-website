@@ -3,10 +3,6 @@ import {
   Phone,
   Mail,
   MapPin,
-  Linkedin,
-  Twitter,
-  Facebook,
-  Instagram,
 } from "lucide-react";
 
 const quickLinks = [
@@ -41,29 +37,6 @@ const industryLinks = [
   { name: "Banking", path: "/industries" },
 ];
 
-const socialLinks = [
-  {
-    name: "LinkedIn",
-    href: "https://www.linkedin.com/company/sgng-associates",
-    icon: Linkedin,
-  },
-  {
-    name: "Facebook",
-    href: "https://www.facebook.com/sgngassociates",
-    icon: Facebook,
-  },
-  {
-    name: "Twitter",
-    href: "https://twitter.com/sgngassociates",
-    icon: Twitter,
-  },
-  {
-    name: "Instagram",
-    href: "https://www.instagram.com/sgngassociates",
-    icon: Instagram,
-  },
-];
-
 function ColumnHeading({ children }) {
   return (
     <div className="mb-6">
@@ -94,21 +67,6 @@ function Footer() {
               A tech-enabled Chartered Accountancy firm delivering innovative financial solutions across India, UAE, USA, Canada, UK, Singapore &amp; Australia.
             </p>
 
-            {/* Social Icons */}
-            <div className="mt-6 flex items-center gap-3">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.name}
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-primary-100/10 bg-primary-800/50 text-primary-100/60 backdrop-blur-sm transition-all duration-300 hover:border-accent-500/40 hover:bg-accent-500 hover:text-white hover:shadow-[0_0_12px_rgba(255,215,0,0.25)]"
-                >
-                  <social.icon className="h-[18px] w-[18px]" />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* ── Column 2 — Quick Links ── */}

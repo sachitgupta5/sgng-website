@@ -142,7 +142,45 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="bg-white py-20">
+      <section className="bg-white py-10 lg:py-14">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <span className="inline-block rounded-full bg-accent-500/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-accent-600">
+              Serving Globally
+            </span>
+            <h2 className="mt-3 font-serif text-3xl font-bold text-primary-900 sm:text-4xl">
+              International Compliance Coverage
+            </h2>
+            <div className="mx-auto mt-3 h-1 w-16 rounded bg-accent-500" />
+            <p className="mx-auto mt-4 max-w-2xl text-primary-700/70">
+              In addition to India, we manage local compliance requirements for businesses operating
+              in the following countries.
+            </p>
+          </div>
+
+          <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-6">
+            {[
+              { flag: '\u{1F1E6}\u{1F1EA}', country: 'UAE', detail: 'VAT, Corporate Tax, Free Zone compliance' },
+              { flag: '\u{1F1FA}\u{1F1F8}', country: 'USA', detail: 'Federal & State tax filings, IRS compliance' },
+              { flag: '\u{1F1E8}\u{1F1E6}', country: 'Canada', detail: 'CRA filings, GST/HST, payroll compliance' },
+              { flag: '\u{1F1EC}\u{1F1E7}', country: 'UK', detail: 'HMRC, VAT, Companies House filings' },
+              { flag: '\u{1F1F8}\u{1F1EC}', country: 'Singapore', detail: 'IRAS, GST, ACRA compliance' },
+              { flag: '\u{1F1E6}\u{1F1FA}', country: 'Australia', detail: 'ATO, GST, BAS, ASIC compliance' },
+            ].map(({ flag, country, detail }) => (
+              <div
+                key={country}
+                className="group flex flex-col items-center rounded-xl border border-primary-200/30 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent-500/40 hover:shadow-lg hover:shadow-primary-500/10"
+              >
+                <span className="text-4xl">{flag}</span>
+                <h3 className="mt-3 font-bold text-primary-900">{country}</h3>
+                <p className="mt-1.5 text-xs leading-relaxed text-primary-700/60">{detail}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-gradient py-10">
         <div className="mx-auto max-w-4xl rounded-xl hero-gradient px-8 py-16 text-center shadow-2xl sm:px-14">
           <h2 className="font-serif text-3xl font-bold text-white sm:text-4xl">Need Help Choosing the Right Service?</h2>
           <p className="mx-auto mt-4 max-w-xl text-primary-100/70">

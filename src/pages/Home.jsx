@@ -74,13 +74,13 @@ const values = [
 ];
 
 const countries = [
-  { flag: "🇮🇳", name: "India",     note: "HQ — Pan-India presence"          },
-  { flag: "🇦🇪", name: "UAE",       note: "VAT, Corporate Tax, Free Zone"     },
-  { flag: "🇺🇸", name: "USA",       note: "Federal & State Tax, IRS"          },
-  { flag: "🇨🇦", name: "Canada",    note: "CRA, GST/HST, Payroll"             },
-  { flag: "🇬🇧", name: "UK",        note: "HMRC, VAT, Companies House"        },
-  { flag: "🇸🇬", name: "Singapore", note: "IRAS, GST, ACRA"                   },
-  { flag: "🇦🇺", name: "Australia", note: "ATO, GST, BAS, ASIC"               },
+  { flag: "\u{1F1EE}\u{1F1F3}", name: "India",     note: "Pan-India presence across 5 states"           },
+  { flag: "\u{1F1E6}\u{1F1EA}", name: "UAE",       note: "VAT, Corporate Tax, Free Zone compliance"     },
+  { flag: "\u{1F1FA}\u{1F1F8}", name: "USA",       note: "Federal & State tax, IRS compliance"          },
+  { flag: "\u{1F1E8}\u{1F1E6}", name: "Canada",    note: "CRA filings, GST/HST, payroll"               },
+  { flag: "\u{1F1EC}\u{1F1E7}", name: "UK",        note: "HMRC, VAT, Companies House filings"           },
+  { flag: "\u{1F1F8}\u{1F1EC}", name: "Singapore", note: "IRAS, GST, ACRA compliance"                   },
+  { flag: "\u{1F1E6}\u{1F1FA}", name: "Australia", note: "ATO, GST, BAS, ASIC compliance"               },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -134,23 +134,24 @@ export default function Home() {
 
         <div className="relative mx-auto flex min-h-[calc(100vh-5rem)] max-w-7xl flex-col items-center justify-center px-6 py-24 text-center">
 
-          {/* Super-label */}
+          {/* Brand label */}
           <div className="animate-fade-in-up mb-6 flex items-center gap-3">
-            <span className="h-px w-10 bg-accent-500/50" />
-            <p className="text-[11px] font-bold uppercase tracking-[0.4em] text-accent-500">
-              Serving Globally
+            <span className="h-px w-8 bg-accent-500/50" />
+            <p className="gold-shimmer text-sm font-bold uppercase tracking-[0.3em] sm:text-base">
+              SGNG &amp; Associates
             </p>
-            <span className="h-px w-10 bg-accent-500/50" />
+            <span className="h-px w-8 bg-accent-500/50" />
           </div>
 
-          {/* Brand name — gold shimmer */}
-          <h1 className="animate-fade-in-up gold-shimmer font-serif text-5xl font-bold leading-[1.08] tracking-tight sm:text-6xl lg:text-7xl xl:text-8xl">
-            SGNG &amp; Associates
+          {/* Value proposition headline */}
+          <h1 className="animate-fade-in-up font-serif text-4xl font-bold leading-[1.12] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
+            Expert Financial Solutions <br className="hidden sm:block" />
+            <span className="gold-shimmer">Trusted Across 7 Nations</span>
           </h1>
 
           {/* Designation */}
-          <p className="animate-fade-in-up animation-delay-200 mt-5 font-serif text-xl font-light tracking-[0.25em] text-white/80 opacity-0 sm:text-2xl">
-            Chartered Accountants
+          <p className="animate-fade-in-up animation-delay-200 mt-5 font-serif text-lg font-light tracking-[0.2em] text-white/60 opacity-0 sm:text-xl">
+            Chartered Accountants &bull; Serving Globally
           </p>
 
           {/* Decorative rule */}
@@ -160,10 +161,10 @@ export default function Home() {
             <span className="block h-px w-16 bg-gradient-to-l from-transparent to-accent-500/60 sm:w-24" />
           </div>
 
-          {/* Value prop */}
+          {/* Supporting text */}
           <p className="animate-fade-in-up animation-delay-400 mt-8 max-w-2xl text-lg leading-relaxed text-primary-100/75 opacity-0">
-            A tech-enabled CA firm delivering comprehensive financial, tax, audit
-            and advisory services across India and 6 international markets.
+            Tax, audit, compliance, and business advisory for enterprises across
+            India, UAE, USA, Canada, UK, Singapore &amp; Australia.
           </p>
 
           {/* CTAs */}

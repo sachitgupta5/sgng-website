@@ -415,44 +415,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Global Compliance Coverage */}
-      <section className="section-gradient py-10 lg:py-14">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <span className="inline-block rounded-full bg-accent-500/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-accent-600">
-              Serving Globally
-            </span>
-            <h2 className="mt-3 font-serif text-3xl font-bold text-primary-900 sm:text-4xl">
-              International Compliance Coverage
-            </h2>
-            <div className="mx-auto mt-3 h-1 w-16 rounded bg-accent-500" />
-            <p className="mx-auto mt-4 max-w-2xl text-primary-700/70">
-              In addition to India, we manage local compliance requirements for businesses operating
-              in the following countries.
-            </p>
-          </div>
-
-          <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-6">
-            {[
-              { flag: '🇦🇪', country: 'UAE', detail: 'VAT, Corporate Tax, Free Zone compliance' },
-              { flag: '🇺🇸', country: 'USA', detail: 'Federal & State tax filings, IRS compliance' },
-              { flag: '🇨🇦', country: 'Canada', detail: 'CRA filings, GST/HST, payroll compliance' },
-              { flag: '🇬🇧', country: 'UK', detail: 'HMRC, VAT, Companies House filings' },
-              { flag: '🇸🇬', country: 'Singapore', detail: 'IRAS, GST, ACRA compliance' },
-              { flag: '🇦🇺', country: 'Australia', detail: 'ATO, GST, BAS, ASIC compliance' },
-            ].map(({ flag, country, detail }) => (
-              <div
-                key={country}
-                className="group flex flex-col items-center rounded-xl border border-primary-200/30 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent-500/40 hover:shadow-lg hover:shadow-primary-500/10"
-              >
-                <span className="text-4xl">{flag}</span>
-                <h3 className="mt-3 font-bold text-primary-900">{country}</h3>
-                <p className="mt-1.5 text-xs leading-relaxed text-primary-700/60">{detail}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
     </>
   );
 }
