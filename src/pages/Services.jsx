@@ -60,10 +60,10 @@ const services = [
     description: 'Registration, compliance, certifications, annual returns and GST audit.',
   },
   {
-    title: 'IND-AS Implementation',
-    slug: 'ind-as-implementation',
+    title: 'Business Automation & AI Advisory',
+    slug: 'business-automation-ai-advisory',
     icon: BookOpen,
-    description: 'Indian Accounting Standards implementation and first-time adoption.',
+    description: 'AI-powered automation solutions for accounting, compliance, and business processes.',
   },
   {
     title: 'Internal Financial Controls (IFC)',

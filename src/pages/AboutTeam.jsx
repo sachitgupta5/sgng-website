@@ -3,28 +3,46 @@ import { Users, GraduationCap, Clock, Star, ArrowRight } from 'lucide-react';
 
 const teamMembers = [
   {
-    name: 'CA Sachit Gupta',
-    designation: 'Founding Partner',
+    name: 'Sachit Gupta',
+    designation: 'Co-Founder & Managing Partner, FCA',
     initials: 'SG',
-    bio: 'A visionary leader with over 15 years of experience in taxation, audit, and business advisory. Sachit founded SGNG with a mission to blend technology with traditional CA practices.',
+    bio: '15+ years post-qualification experience specializing in Direct Taxation Advisory, Compliance Advisory, Business AI Automation Advisory, and International & Cross-Border Taxations.',
   },
   {
-    name: 'CA Naman Gupta',
-    designation: 'Partner',
+    name: 'Nitika Gupta',
+    designation: 'Co-Founder & Partner, FCA',
     initials: 'NG',
-    bio: 'Specializing in corporate finance and regulatory compliance, Naman brings deep expertise in helping businesses navigate complex financial landscapes across India and the UAE.',
+    bio: '15 years of experience specializing in Agriculture audit and quality certification, helping businesses in Supply Chain Management.',
+  },
+  {
+    name: 'Gaurav Singla',
+    designation: 'Senior Partner, FCA',
+    initials: 'GS',
+    bio: '15+ years in practice with deep experience in finalization of accounts for Banks and PSUs. Expert in Financial Planning, Capital Restructuring, Public Issues, Takeovers, and corporate advisory with top corporate houses in India and abroad.',
   },
   {
     name: 'Ravi Garg',
     designation: 'Partner',
     initials: 'RG',
-    bio: '8+ years of experience in SOX Audit, internal controls, and risk advisory. Ravi specializes in designing and testing ICFR frameworks for listed and multinational companies.',
+    bio: '8+ years of experience specializing in SOX Audit for international clients. Also handles Internal Process Audit engagements.',
   },
   {
-    name: 'CA Rajesh Kumar',
-    designation: 'Tax Consultant',
-    initials: 'RK',
-    bio: 'With extensive experience in direct and indirect taxation, Rajesh helps clients optimize their tax positions while ensuring full compliance with the latest regulations.',
+    name: 'Nand Kishor Agarwal',
+    designation: 'Partner, CA',
+    initials: 'NA',
+    bio: 'Strong experience in Corporate Audit & Assurance, Taxation and Compliances. Specializes in Startup funding, structuring, aggregators and assistance.',
+  },
+  {
+    name: 'JS Dangwal',
+    designation: 'Advisor',
+    initials: 'JD',
+    bio: 'Retired Bank Manager from a reputed PSU Bank with 35+ years in Banking. Associated with the firm for 5+ years, specializing in Bank audit and Stock audit assignments.',
+  },
+  {
+    name: 'Arun Koul',
+    designation: 'Partner, CA',
+    initials: 'AK',
+    bio: '20+ years in Management Consultancy with specialization in Forex, Hotels, and Telecom industries. Actively engaged in GST implementation including E-invoicing for large corporates and knowledge sharing on Indirect Taxation.',
   },
 ];
 

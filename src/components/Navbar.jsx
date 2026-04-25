@@ -34,7 +34,7 @@ const serviceLinks = [
   "Non-Core Process Outsourcing",
   "Forensic Accounting and Fraud Detection",
   "GST Related Services",
-  "IND-AS Implementation",
+  "Business Automation & AI Advisory",
   "Internal Financial Controls (IFC)",
   "Internal Audit",
   "Book Keeping & Accounting Services",
