@@ -12,6 +12,7 @@ const AboutVision = lazy(() => import('./pages/AboutVision'))
 const AboutTeam = lazy(() => import('./pages/AboutTeam'))
 const Career = lazy(() => import('./pages/Career'))
 const Contact = lazy(() => import('./pages/Contact'))
+const ServiceDetail = lazy(() => import('./pages/ServiceDetail'))
 
 function Loading() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/services/:slug" element={<ServiceDetail />} />
             <Route path="/industries" element={<Industries />} />
             <Route path="/about/vision" element={<AboutVision />} />
             <Route path="/about/team" element={<AboutTeam />} />

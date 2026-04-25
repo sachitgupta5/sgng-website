@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary-50: #eff6ff;
-  --color-primary-100: #dbeafe;
-  --color-primary-200: #bfdbfe;
-  --color-primary-300: #93c5fd;
-  --color-primary-400: #60a5fa;
-  --color-primary-500: #1e40af;
-  --color-primary-600: #1e3a8a;
-  --color-primary-700: #1e3380;
-  --color-primary-800: #1a2d6d;
-  --color-primary-900: #172554;
-  --color-accent-500: #f59e0b;
-  --color-accent-600: #d97706;
+  --color-primary-50: #FFF8DC;
+  --color-primary-100: #FFE4B5;
+  --color-primary-200: #F4A460;
+  --color-primary-300: #CD853F;
+  --color-primary-400: #A0522D;
+  --color-primary-500: #8B4513;
+  --color-primary-600: #7A3B10;
+  --color-primary-700: #6B340E;
+  --color-primary-800: #5C2D0C;
+  --color-primary-900: #3E1E08;
+  --color-accent-500: #FFD700;
+  --color-accent-600: #FFA500;
   --font-family-sans: 'Inter', sans-serif;
   --font-family-serif: 'Playfair Display', serif;
 }
@@ -25,6 +25,7 @@ body {
   font-family: var(--font-family-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #3E1E08;
 }
 
 @keyframes fade-in-up {
@@ -43,8 +44,13 @@ body {
   to { opacity: 1; }
 }
 
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
 .animate-fade-in-up {
-  animation: fade-in-up 0.6s ease-out forwards;
+  animation: fade-in-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .animate-fade-in {
@@ -54,3 +60,19 @@ body {
 .animation-delay-200 { animation-delay: 0.2s; }
 .animation-delay-400 { animation-delay: 0.4s; }
 .animation-delay-600 { animation-delay: 0.6s; }
+
+.gold-shimmer {
+  background: linear-gradient(90deg, #FFD700, #FFA500, #FFD700);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #3E1E08 0%, #5C2D0C 25%, #8B4513 50%, #6B340E 75%, #3E1E08 100%);
+}
+
+.section-gradient {
+  background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%);
+}
