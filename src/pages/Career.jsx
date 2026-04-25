@@ -159,7 +159,7 @@ function Career() {
                   {job.description}
                 </p>
                 <a
-                  href={`mailto:careers@sgng.in?subject=Application for ${job.title} - ${job.location}`}
+                  href={`mailto:partner@sgng.in?subject=Application for ${job.title} - ${job.location}`}
                   className="mt-6 inline-flex items-center justify-center gap-2 rounded-lg bg-accent-500 px-6 py-3 text-sm font-semibold text-primary-900 transition-all duration-300 hover:bg-accent-600 hover:gap-3"
                 >
                   Apply Now
@@ -185,11 +185,11 @@ function Career() {
             reach out when a matching opportunity arises.
           </p>
           <a
-            href="mailto:careers@sgng.in?subject=General Career Inquiry"
+            href="mailto:partner@sgng.in?subject=General Career Inquiry"
             className="mt-8 inline-flex items-center gap-2 bg-accent-500 px-8 py-3.5 text-lg font-semibold text-primary-900 shadow-lg transition-all duration-300 hover:bg-accent-600 hover:gap-3"
           >
             <Mail className="h-5 w-5" />
-            careers@sgng.in
+            partner@sgng.in
           </a>
         </div>
       </section>
