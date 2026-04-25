@@ -91,8 +91,7 @@ function Footer() {
             </h3>
 
             <p className="mt-5 text-sm leading-relaxed text-primary-100/70">
-              A tech-enabled Chartered Accountancy firm delivering innovative
-              financial solutions across India and the UAE.
+              A tech-enabled Chartered Accountancy firm delivering innovative financial solutions across India, UAE, USA, Canada, UK, Singapore &amp; Australia.
             </p>
 
             {/* Social Icons */}
