@@ -746,7 +746,7 @@ export default function ServiceDetail() {
   return (
     <main>
       {/* Hero */}
-      <section className="hero-gradient py-28 lg:py-36">
+      <section className="hero-gradient py-12 lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Link
             to="/services"
@@ -771,7 +771,7 @@ export default function ServiceDetail() {
       </section>
 
       {/* Overview */}
-      <section className="bg-white py-16 sm:py-20">
+      <section className="bg-white py-8 sm:py-12">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl">
             <h2 className="font-serif text-3xl font-bold text-primary-900 sm:text-4xl">Overview</h2>

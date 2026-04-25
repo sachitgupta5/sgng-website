@@ -110,7 +110,7 @@ export default function Contact() {
   return (
     <>
       {/* Hero */}
-      <section className="hero-gradient py-28 text-center lg:py-36">
+      <section className="hero-gradient py-12 text-center lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-accent-500">
             Get In Touch
@@ -130,7 +130,7 @@ export default function Contact() {
       </section>
 
       {/* Form & Info */}
-      <section className="section-gradient py-16 lg:py-24">
+      <section className="section-gradient py-10 lg:py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
             {/* Form */}
@@ -378,7 +378,7 @@ export default function Contact() {
       </section>
 
       {/* Office Locations */}
-      <section className="bg-white py-16 lg:py-24">
+      <section className="bg-white py-10 lg:py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="font-serif text-3xl font-bold text-primary-900 sm:text-4xl">
@@ -416,7 +416,7 @@ export default function Contact() {
       </section>
 
       {/* Google Maps */}
-      <section className="section-gradient py-16 lg:py-24">
+      <section className="section-gradient py-10 lg:py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="font-serif text-3xl font-bold text-primary-900 sm:text-4xl">

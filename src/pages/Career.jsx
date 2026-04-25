@@ -66,7 +66,7 @@ function Career() {
   return (
     <div>
       {/* Hero */}
-      <section className="hero-gradient py-28 text-center lg:py-36">
+      <section className="hero-gradient py-12 text-center lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-accent-500">
             Join Us
@@ -86,7 +86,7 @@ function Career() {
       </section>
 
       {/* Why Work With Us */}
-      <section className="bg-white py-20 sm:py-28">
+      <section className="bg-white py-10 sm:py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <span className="inline-block rounded-full bg-primary-50 px-4 py-1.5 text-sm font-semibold tracking-wide text-primary-500">
@@ -120,7 +120,7 @@ function Career() {
       </section>
 
       {/* Current Openings */}
-      <section className="section-gradient py-20 sm:py-28">
+      <section className="section-gradient py-10 sm:py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <span className="inline-block rounded-full bg-accent-500/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-accent-600">
@@ -172,7 +172,7 @@ function Career() {
       </section>
 
       {/* CTA */}
-      <section className="hero-gradient py-16 sm:py-20">
+      <section className="hero-gradient py-8 sm:py-12">
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary-800/50">
             <Send className="h-8 w-8 text-accent-500" />

@@ -66,7 +66,7 @@ function Industries() {
   return (
     <main>
       {/* Hero */}
-      <section className="hero-gradient py-28 text-center lg:py-36">
+      <section className="hero-gradient py-12 text-center lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-accent-500">
             Sectors We Serve
@@ -86,7 +86,7 @@ function Industries() {
       </section>
 
       {/* Industry Cards */}
-      <section className="section-gradient py-20 sm:py-28">
+      <section className="section-gradient py-10 sm:py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {industries.map((industry) => (
@@ -115,7 +115,7 @@ function Industries() {
       </section>
 
       {/* CTA */}
-      <section className="hero-gradient py-16 sm:py-20">
+      <section className="hero-gradient py-8 sm:py-12">
         <div className="mx-auto max-w-4xl px-8 text-center">
           <h2 className="font-serif text-3xl font-bold text-white sm:text-4xl">
             Looking for industry-specific solutions?

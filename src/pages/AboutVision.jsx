@@ -31,7 +31,7 @@ function AboutVision() {
   return (
     <div>
       {/* Hero Banner */}
-      <section className="hero-gradient py-28 text-center lg:py-36">
+      <section className="hero-gradient py-12 text-center lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-accent-500">
             Who We Are
@@ -52,7 +52,7 @@ function AboutVision() {
       </section>
 
       {/* Vision Section */}
-      <section className="bg-white py-20 sm:py-28">
+      <section className="bg-white py-10 sm:py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div className="flex justify-center lg:order-2">
@@ -79,7 +79,7 @@ function AboutVision() {
       </section>
 
       {/* Mission Section */}
-      <section className="section-gradient py-20 sm:py-28">
+      <section className="section-gradient py-10 sm:py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div className="flex justify-center">
@@ -109,7 +109,7 @@ function AboutVision() {
       </section>
 
       {/* Core Values Section */}
-      <section className="bg-white py-20 sm:py-28">
+      <section className="bg-white py-10 sm:py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <span className="inline-block rounded-full bg-primary-50 px-4 py-1.5 text-sm font-semibold tracking-wide text-primary-500">
@@ -143,7 +143,7 @@ function AboutVision() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="hero-gradient py-16 sm:py-20">
+      <section className="hero-gradient py-8 sm:py-12">
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="font-serif text-3xl font-bold text-white sm:text-4xl">
             Built on Trust. Driven by Purpose.

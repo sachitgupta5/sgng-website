@@ -100,7 +100,7 @@ const services = [
 export default function Services() {
   return (
     <main>
-      <section className="hero-gradient py-28 text-center lg:py-36">
+      <section className="hero-gradient py-12 text-center lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-accent-500">What We Offer</p>
           <h1 className="font-serif text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">Our Services</h1>
@@ -115,7 +115,7 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="section-gradient py-20 sm:py-28">
+      <section className="section-gradient py-10 sm:py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => {

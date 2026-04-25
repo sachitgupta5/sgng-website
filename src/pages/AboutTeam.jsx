@@ -22,13 +22,13 @@ const teamMembers = [
   },
   {
     name: 'Ravi Garg',
-    designation: 'Partner',
+    designation: 'SOX Expert',
     initials: 'RG',
     bio: '8+ years of experience specializing in SOX Audit for international clients. Also handles Internal Process Audit engagements.',
   },
   {
     name: 'Nand Kishor Agarwal',
-    designation: 'Partner, CA',
+    designation: 'Startup Advisor, CA',
     initials: 'NA',
     bio: 'Strong experience in Corporate Audit & Assurance, Taxation and Compliances. Specializes in Startup funding, structuring, aggregators and assistance.',
   },
@@ -40,7 +40,7 @@ const teamMembers = [
   },
   {
     name: 'Arun Koul',
-    designation: 'Partner, CA',
+    designation: 'Internal Audit, CA',
     initials: 'AK',
     bio: '20+ years in Management Consultancy with specialization in Forex, Hotels, and Telecom industries. Actively engaged in GST implementation including E-invoicing for large corporates and knowledge sharing on Indirect Taxation.',
   },
@@ -71,7 +71,7 @@ function AboutTeam() {
   return (
     <div>
       {/* Hero Banner */}
-      <section className="hero-gradient py-28 text-center lg:py-36">
+      <section className="hero-gradient py-12 text-center lg:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-accent-500">
             Our People
@@ -91,7 +91,7 @@ function AboutTeam() {
       </section>
 
       {/* Intro Section */}
-      <section className="bg-white py-20 sm:py-28">
+      <section className="bg-white py-10 sm:py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary-50">
@@ -117,7 +117,7 @@ function AboutTeam() {
       </section>
 
       {/* Leadership Section */}
-      <section className="section-gradient py-20 sm:py-28">
+      <section className="section-gradient py-10 sm:py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <span className="inline-block rounded-full bg-primary-50 px-4 py-1.5 text-sm font-semibold tracking-wide text-primary-500">
@@ -148,7 +148,7 @@ function AboutTeam() {
       </section>
 
       {/* Why Our Team Section */}
-      <section className="bg-white py-20 sm:py-28">
+      <section className="bg-white py-10 sm:py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <span className="inline-block rounded-full bg-accent-500/10 px-4 py-1.5 text-sm font-semibold tracking-wide text-accent-600">
@@ -175,7 +175,7 @@ function AboutTeam() {
       </section>
 
       {/* CTA Section */}
-      <section className="hero-gradient py-16 sm:py-20">
+      <section className="hero-gradient py-8 sm:py-12">
         <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="font-serif text-3xl font-bold text-white sm:text-4xl">
             Want to Be Part of Our Team?
