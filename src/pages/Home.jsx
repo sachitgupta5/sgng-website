@@ -1,3 +1,4 @@
+import { useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Shield,
@@ -88,6 +89,20 @@ const countries = [
 /* ------------------------------------------------------------------ */
 
 export default function Home() {
+  const servicesRef = useRef(null);
+  const [servicesVisible, setServicesVisible] = useState(false);
+
+  useEffect(() => {
+    const el = servicesRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { setServicesVisible(true); observer.disconnect(); } },
+      { threshold: 0.15 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <main>
 
@@ -285,7 +300,7 @@ export default function Home() {
       </section>
 
       {/* ============================================================ */}
-      {/*  OUR SERVICES — Glass-card premium dark section              */}
+      {/*  OUR SERVICES — Glass cards with slide-in entrance            */}
       {/* ============================================================ */}
       <section className="relative overflow-hidden py-20 lg:py-28">
         {/* Dark background */}
@@ -307,8 +322,14 @@ export default function Home() {
         />
 
         <div className="relative mx-auto max-w-7xl px-6">
-          {/* Header */}
-          <div className="mb-14 flex flex-col items-start gap-4 sm:flex-row sm:items-end sm:justify-between">
+          {/* Header — also animated */}
+          <div
+            className={`mb-14 flex flex-col items-start gap-4 sm:flex-row sm:items-end sm:justify-between transition-all duration-1000 ease-out ${
+              servicesVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
+            }`}
+          >
             <div>
               <div className="mb-3 flex items-center gap-3">
                 <span className="h-px w-8 bg-accent-500/40" />
@@ -328,13 +349,16 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* Glass-card grid */}
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {services.map(({ icon: Icon, title, slug }) => (
+          {/* Glass-card grid with staggered slide-in */}
+          <div ref={servicesRef} className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {services.map(({ icon: Icon, title, slug }, i) => (
               <Link
                 key={slug}
                 to={`/services/${slug}`}
-                className="glass-card glass-card-shine group relative flex flex-col rounded-xl p-6 transition-all duration-500 hover:-translate-y-1 hover:border-accent-500/25 hover:shadow-[0_8px_40px_-8px_rgba(255,215,0,0.15)]"
+                className={`glass-card glass-card-shine group relative flex flex-col rounded-xl p-6 card-entrance hover:-translate-y-1 hover:border-accent-500/25 hover:shadow-[0_8px_40px_-8px_rgba(255,215,0,0.15)] ${
+                  servicesVisible ? "card-entered" : ""
+                }`}
+                style={{ "--card-index": i }}
               >
                 {/* Icon */}
                 <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-accent-500/10 text-accent-500 ring-1 ring-accent-500/20 transition-all duration-300 group-hover:bg-accent-500/20 group-hover:ring-accent-500/30 group-hover:shadow-[0_0_20px_-4px_rgba(255,215,0,0.3)]">
