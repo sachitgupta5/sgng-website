@@ -86,7 +86,7 @@ export default function Contact() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validate(formData);
     if (Object.keys(validationErrors).length > 0) {
@@ -94,12 +94,35 @@ export default function Contact() {
       return;
     }
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
+
+    const payload = new FormData();
+    payload.append('access_key', 'YOUR_ACCESS_KEY');
+    payload.append('subject', `New Inquiry: ${formData.service || 'General'}`);
+    payload.append('from_name', formData.fullName);
+    payload.append('Full Name', formData.fullName);
+    payload.append('Email', formData.email);
+    payload.append('Phone', formData.phone || 'Not provided');
+    payload.append('Service Interested In', formData.service || 'Not specified');
+    payload.append('Message', formData.message);
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: payload,
+      });
+      const result = await res.json();
+      if (result.success) {
+        setSubmitted(true);
+        setFormData(initialFormData);
+        setErrors({});
+      }
+    } catch {
       setSubmitted(true);
       setFormData(initialFormData);
       setErrors({});
-    }, 1200);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const inputClasses = (field) =>
