@@ -301,10 +301,8 @@ export default function Navbar() {
           >
             Get In Touch
           </Link>
-          <a
-            href="https://sgng.in/login"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/login"
             title="Team Login"
             className={`inline-flex items-center justify-center h-9 w-9 rounded-lg transition-all duration-300 ${
               isScrolled
@@ -313,7 +311,7 @@ export default function Navbar() {
             }`}
           >
             <Lock size={15} />
-          </a>
+          </Link>
         </div>
 
         {/* ---- Hamburger (mobile / tablet) ---- */}
@@ -426,16 +424,14 @@ export default function Navbar() {
             >
               Get In Touch
             </Link>
-            <a
-              href="https://sgng.in/login"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/login"
               onClick={closeMobile}
               className="flex items-center justify-center gap-2 w-full rounded-lg border border-primary-200 px-5 py-2.5 text-xs font-medium text-primary-500 hover:bg-primary-50 transition-colors duration-200"
             >
               <Lock size={13} />
               Team Login
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -300,31 +300,14 @@ export default function Home() {
       </section>
 
       {/* ============================================================ */}
-      {/*  OUR SERVICES — Glass cards with slide-in entrance            */}
+      {/*  OUR SERVICES — Light theme with slide-in entrance            */}
       {/* ============================================================ */}
-      <section className="relative overflow-hidden py-20 lg:py-28">
-        {/* Dark background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-primary-900 via-[#2a1506] to-primary-900" />
+      <section className="section-gradient py-16 lg:py-24">
+        <div className="mx-auto max-w-7xl px-6">
 
-        {/* Ambient glow orbs */}
-        <div className="pointer-events-none absolute -top-40 -left-40 h-[500px] w-[500px] rounded-full bg-accent-500/[0.04] blur-[120px] animate-glow-pulse" />
-        <div className="pointer-events-none absolute -bottom-40 -right-40 h-[500px] w-[500px] rounded-full bg-primary-500/[0.06] blur-[120px] animate-glow-pulse animation-delay-800" />
-        <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] rounded-full bg-accent-600/[0.03] blur-[150px]" />
-
-        {/* Subtle grid pattern */}
-        <div
-          className="pointer-events-none absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,215,0,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,215,0,0.3) 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
-          }}
-        />
-
-        <div className="relative mx-auto max-w-7xl px-6">
-          {/* Header — also animated */}
+          {/* Header — animated */}
           <div
-            className={`mb-14 flex flex-col items-start gap-4 sm:flex-row sm:items-end sm:justify-between transition-all duration-1000 ease-out ${
+            className={`mb-12 flex flex-col items-start gap-4 sm:flex-row sm:items-end sm:justify-between transition-all duration-1000 ease-out ${
               servicesVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-10"
@@ -332,51 +315,44 @@ export default function Home() {
           >
             <div>
               <div className="mb-3 flex items-center gap-3">
-                <span className="h-px w-8 bg-accent-500/40" />
-                <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-accent-500">What We Offer</span>
+                <span className="h-px w-8 bg-accent-500/60" />
+                <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-accent-600">What We Offer</span>
               </div>
-              <h2 className="font-serif text-4xl font-bold text-primary-50 sm:text-5xl">Our Services</h2>
-              <p className="mt-3 max-w-lg text-sm leading-relaxed text-primary-100/50">
-                Comprehensive financial solutions powered by technology, delivered with expertise across borders.
-              </p>
+              <h2 className="font-serif text-4xl font-bold text-primary-900 sm:text-5xl">Our Services</h2>
             </div>
             <Link
               to="/services"
-              className="group shrink-0 inline-flex items-center gap-2 rounded-lg border border-accent-500/20 bg-accent-500/5 px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-accent-500 transition-all duration-300 hover:border-accent-500/40 hover:bg-accent-500/10 hover:gap-3"
+              className="group shrink-0 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-primary-500 transition-all duration-200 hover:text-accent-600 hover:gap-3"
             >
-              View All Services
-              <ArrowRight className="h-3.5 w-3.5" />
+              View All
+              <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
 
-          {/* Glass-card grid with staggered slide-in */}
+          {/* Card grid with staggered slide-in */}
           <div ref={servicesRef} className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {services.map(({ icon: Icon, title, slug }, i) => (
               <Link
                 key={slug}
                 to={`/services/${slug}`}
-                className={`glass-card glass-card-shine group relative flex flex-col rounded-xl p-6 card-entrance hover:-translate-y-1 hover:border-accent-500/25 hover:shadow-[0_8px_40px_-8px_rgba(255,215,0,0.15)] ${
+                className={`group relative flex items-start gap-4 overflow-hidden rounded-xl border border-primary-200/40 bg-white/80 p-6 backdrop-blur-sm card-entrance hover:-translate-y-0.5 hover:border-accent-500/40 hover:bg-white hover:shadow-lg hover:shadow-primary-500/8 ${
                   servicesVisible ? "card-entered" : ""
                 }`}
                 style={{ "--card-index": i }}
               >
-                {/* Icon */}
-                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-accent-500/10 text-accent-500 ring-1 ring-accent-500/20 transition-all duration-300 group-hover:bg-accent-500/20 group-hover:ring-accent-500/30 group-hover:shadow-[0_0_20px_-4px_rgba(255,215,0,0.3)]">
-                  <Icon className="h-5 w-5" />
+                {/* Gold left flash on hover */}
+                <div className="absolute inset-y-0 left-0 w-0.5 rounded-l-xl bg-accent-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-primary-200/60 bg-primary-50 text-primary-500 transition-all duration-300 group-hover:border-accent-500/40 group-hover:bg-accent-500 group-hover:text-white">
+                  <Icon className="h-4 w-4" />
                 </div>
-
-                {/* Title */}
-                <h3 className="text-sm font-semibold leading-snug text-primary-50/90 transition-colors duration-300 group-hover:text-primary-50">
-                  {title}
-                </h3>
-
-                {/* Reveal arrow */}
-                <div className="mt-4 flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-accent-500/60 transition-all duration-300 group-hover:text-accent-500 group-hover:gap-2.5">
-                  Explore <ChevronRight className="h-3 w-3" />
+                <div className="flex-1">
+                  <h3 className="text-sm font-semibold leading-snug text-primary-800 transition-colors group-hover:text-primary-900">
+                    {title}
+                  </h3>
+                  <span className="mt-2 inline-flex items-center gap-1 text-[11px] font-semibold uppercase tracking-wider text-accent-500 opacity-0 transition-all duration-300 group-hover:opacity-100">
+                    Learn more <ArrowRight className="h-3 w-3" />
+                  </span>
                 </div>
-
-                {/* Bottom gold accent line */}
-                <div className="absolute bottom-0 left-6 right-6 h-px bg-gradient-to-r from-transparent via-accent-500/0 to-transparent transition-all duration-500 group-hover:via-accent-500/40" />
               </Link>
             ))}
           </div>

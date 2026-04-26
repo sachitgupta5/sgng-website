@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import WhatsAppButton from './components/WhatsAppButton'
@@ -13,6 +13,7 @@ const AboutTeam = lazy(() => import('./pages/AboutTeam'))
 const Career = lazy(() => import('./pages/Career'))
 const Contact = lazy(() => import('./pages/Contact'))
 const ServiceDetail = lazy(() => import('./pages/ServiceDetail'))
+const Login = lazy(() => import('./pages/Login'))
 
 function Loading() {
   return (
@@ -23,10 +24,13 @@ function Loading() {
 }
 
 function App() {
+  const location = useLocation()
+  const isLoginPage = location.pathname === '/login'
+
   return (
     <div className="flex flex-col min-h-screen">
       <ScrollToTop />
-      <Navbar />
+      {!isLoginPage && <Navbar />}
       <main className="flex-grow">
         <Suspense fallback={<Loading />}>
           <Routes>
@@ -38,11 +42,12 @@ function App() {
             <Route path="/about/team" element={<AboutTeam />} />
             <Route path="/career" element={<Career />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </Suspense>
       </main>
-      <Footer />
-      <WhatsAppButton />
+      {!isLoginPage && <Footer />}
+      {!isLoginPage && <WhatsAppButton />}
     </div>
   )
 }
