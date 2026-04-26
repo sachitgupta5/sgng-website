@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Lock } from "lucide-react";
 
 /* ------------------------------------------------------------------ */
 /*  Navigation Data                                                    */
@@ -289,17 +289,32 @@ export default function Navbar() {
           </NavLink>
         </div>
 
-        {/* ---- CTA button (desktop) ---- */}
-        <Link
-          to="/contact"
-          className={`hidden lg:inline-flex items-center px-6 py-2.5 rounded-lg text-sm font-semibold tracking-wide transition-all duration-500 ${
-            isScrolled
-              ? "bg-accent-500 text-primary-900 hover:bg-accent-600 hover:text-white shadow-[0_4px_20px_-4px_rgba(255,215,0,0.5)]"
-              : "bg-white/95 text-primary-500 hover:bg-white shadow-[0_4px_20px_-4px_rgba(255,255,255,0.3)]"
-          }`}
-        >
-          Get In Touch
-        </Link>
+        {/* ---- CTA + Login (desktop) ---- */}
+        <div className="hidden lg:flex items-center gap-2">
+          <Link
+            to="/contact"
+            className={`inline-flex items-center px-6 py-2.5 rounded-lg text-sm font-semibold tracking-wide transition-all duration-500 ${
+              isScrolled
+                ? "bg-accent-500 text-primary-900 hover:bg-accent-600 hover:text-white shadow-[0_4px_20px_-4px_rgba(255,215,0,0.5)]"
+                : "bg-white/95 text-primary-500 hover:bg-white shadow-[0_4px_20px_-4px_rgba(255,255,255,0.3)]"
+            }`}
+          >
+            Get In Touch
+          </Link>
+          <a
+            href="https://sgng.in/login"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Team Login"
+            className={`inline-flex items-center justify-center h-9 w-9 rounded-lg transition-all duration-300 ${
+              isScrolled
+                ? "text-primary-400 hover:text-accent-600 hover:bg-primary-100/60"
+                : "text-white/50 hover:text-white hover:bg-white/10"
+            }`}
+          >
+            <Lock size={15} />
+          </a>
+        </div>
 
         {/* ---- Hamburger (mobile / tablet) ---- */}
         <button
@@ -402,8 +417,8 @@ export default function Navbar() {
             Contact Us
           </NavLink>
 
-          {/* CTA button */}
-          <div className="px-6 pt-6 pb-8">
+          {/* CTA button + Login */}
+          <div className="px-6 pt-6 pb-8 space-y-3">
             <Link
               to="/contact"
               onClick={closeMobile}
@@ -411,6 +426,16 @@ export default function Navbar() {
             >
               Get In Touch
             </Link>
+            <a
+              href="https://sgng.in/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={closeMobile}
+              className="flex items-center justify-center gap-2 w-full rounded-lg border border-primary-200 px-5 py-2.5 text-xs font-medium text-primary-500 hover:bg-primary-50 transition-colors duration-200"
+            >
+              <Lock size={13} />
+              Team Login
+            </a>
           </div>
         </div>
       </div>

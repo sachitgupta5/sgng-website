@@ -143,14 +143,14 @@ function Footer() {
               {/* Phone */}
               <li>
                 <a
-                  href="tel:+911140538655"
+                  href="tel:+919059052673"
                   className="flex items-start gap-3 text-sm text-primary-100/60 transition-colors duration-200 hover:text-accent-500"
                 >
                   <Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent-500" />
                   <span>
-                    011 4053 8655
+                    +91 90590 52673
                     <br />
-                    +91 99107 64704
+                    +91 98731 64704
                   </span>
                 </a>
               </li>

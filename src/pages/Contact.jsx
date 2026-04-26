@@ -208,7 +208,7 @@ export default function Contact() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        placeholder="+91 99107 64704"
+                        placeholder="+91 XXXXX XXXXX"
                         className={inputClasses('phone')}
                       />
                       {errors.phone && (
@@ -287,19 +287,19 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-primary-900">Phone</h3>
                     <a
-                      href="tel:+911140538655"
+                      href="tel:+919059052673"
                       className="mt-1 block text-primary-700/70 transition-colors duration-200 hover:text-accent-600"
                     >
-                      011 4053 8655
+                      +91 90590 52673
                     </a>
                     <a
-                      href="tel:+919910764704"
+                      href="tel:+919873164704"
                       className="block text-primary-700/70 transition-colors duration-200 hover:text-accent-600"
                     >
-                      +91 99107 64704
+                      +91 98731 64704
                     </a>
                     <a
-                      href="https://wa.me/919910764704"
+                      href="https://wa.me/919059052673"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="mt-2 inline-flex items-center gap-1.5 text-sm font-medium text-accent-600 transition-colors duration-200 hover:text-accent-500"
@@ -339,7 +339,7 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-primary-900">Office Hours</h3>
                     <p className="mt-1 text-primary-700/70">Mon - Sat</p>
-                    <p className="text-primary-700/70">9:00 AM - 6:00 PM</p>
+                    <p className="text-primary-700/70">10:00 AM - 7:00 PM</p>
                     <p className="mt-1 text-sm text-primary-700/50">
                       Sunday &amp; public holidays closed
                     </p>
@@ -355,14 +355,14 @@ export default function Contact() {
                 </p>
                 <div className="mt-4 flex flex-col gap-3 sm:flex-row">
                   <a
-                    href="tel:+919910764704"
+                    href="tel:+919059052673"
                     className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-4 py-2.5 text-sm font-semibold text-primary-500 transition-colors duration-200 hover:bg-primary-50"
                   >
                     <Phone className="h-4 w-4" />
                     Call Now
                   </a>
                   <a
-                    href="https://wa.me/919910764704"
+                    href="https://wa.me/919059052673"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 rounded-lg bg-accent-500 px-4 py-2.5 text-sm font-semibold text-primary-900 transition-colors duration-200 hover:bg-accent-600"
