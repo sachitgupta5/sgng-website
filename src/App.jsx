@@ -14,6 +14,8 @@ const Career = lazy(() => import('./pages/Career'))
 const Contact = lazy(() => import('./pages/Contact'))
 const ServiceDetail = lazy(() => import('./pages/ServiceDetail'))
 const Login = lazy(() => import('./pages/Login'))
+const Resources = lazy(() => import('./pages/Resources'))
+const NotFound = lazy(() => import('./pages/NotFound'))
 
 function Loading() {
   return (
@@ -43,6 +45,8 @@ function App() {
             <Route path="/career" element={<Career />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/resources" element={<Resources />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
       </main>

@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import usePageMeta from "../hooks/usePageMeta";
 import {
   Shield,
   Award,
@@ -89,6 +90,7 @@ const countries = [
 /* ------------------------------------------------------------------ */
 
 export default function Home() {
+  usePageMeta(null, "Tech-enabled CA firm serving 500+ clients across India, UAE, USA, Canada, UK, Singapore & Australia. Expert accounting, auditing, taxation, and compliance services.");
   const servicesRef = useRef(null);
   const [servicesVisible, setServicesVisible] = useState(false);
 

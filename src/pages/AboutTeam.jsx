@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Users, GraduationCap, Clock, Star, ArrowRight } from 'lucide-react';
+import usePageMeta from '../hooks/usePageMeta';
 
 const teamMembers = [
   {
@@ -68,6 +69,7 @@ const highlights = [
 ];
 
 function AboutTeam() {
+  usePageMeta("Our Team", "Meet the leadership team at SGNG & Associates — experienced Chartered Accountants, SOX experts, and advisors driving client success.");
   return (
     <div>
       {/* Hero Banner */}

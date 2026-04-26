@@ -284,6 +284,10 @@ export default function Navbar() {
             Career
           </NavLink>
 
+          <NavLink to="/resources" className={navLinkClasses(isScrolled)}>
+            Resources
+          </NavLink>
+
           <NavLink to="/contact" className={navLinkClasses(isScrolled)}>
             Contact Us
           </NavLink>
@@ -398,6 +402,21 @@ export default function Navbar() {
             }
           >
             Career
+          </NavLink>
+
+          {/* Resources */}
+          <NavLink
+            to="/resources"
+            onClick={closeMobile}
+            className={({ isActive }) =>
+              `px-6 py-4 text-base font-semibold border-b border-primary-100/60 transition-colors duration-200 ${
+                isActive
+                  ? "text-accent-600 bg-primary-50/60"
+                  : "text-primary-800 hover:bg-primary-50/60 hover:text-accent-600"
+              }`
+            }
+          >
+            Resources
           </NavLink>
 
           {/* Contact Us */}

@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle2, ArrowRight } from 'lucide-react';
+import usePageMeta from '../hooks/usePageMeta';
 
 const serviceData = {
   'business-setup-advisory': {
@@ -722,6 +723,7 @@ const allSlugs = Object.keys(serviceData);
 export default function ServiceDetail() {
   const { slug } = useParams();
   const service = serviceData[slug];
+  usePageMeta(service?.title, service?.tagline);
 
   if (!service) {
     return (

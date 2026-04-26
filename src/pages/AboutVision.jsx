@@ -1,4 +1,5 @@
 import { Target, Compass, Shield, Award, Lightbulb, Heart } from 'lucide-react';
+import usePageMeta from '../hooks/usePageMeta';
 
 const coreValues = [
   {
@@ -28,6 +29,7 @@ const coreValues = [
 ];
 
 function AboutVision() {
+  usePageMeta("Our Vision & Mission", "Discover the vision, mission, and core values driving SGNG & Associates — seeing invisible, achieving impossible.");
   return (
     <div>
       {/* Hero Banner */}

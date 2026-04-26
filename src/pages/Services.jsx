@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import usePageMeta from '../hooks/usePageMeta';
 import {
   Building2,
   ArrowRightLeft,
@@ -98,6 +99,7 @@ const services = [
 ];
 
 export default function Services() {
+  usePageMeta("Our Services", "Explore 13+ professional services including taxation, audit, GST, business setup, forensic accounting, AI advisory, and more from SGNG & Associates.");
   return (
     <main>
       <section className="hero-gradient py-12 text-center lg:py-16">

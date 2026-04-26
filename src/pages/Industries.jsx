@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import usePageMeta from '../hooks/usePageMeta';
 import {
   UtensilsCrossed,
   Truck,
@@ -63,6 +64,7 @@ const industries = [
 ];
 
 function Industries() {
+  usePageMeta("Industries We Serve", "SGNG & Associates serves restaurants, transport, travel, manufacturing, forex, retail, banking, and more with tailored financial solutions.");
   return (
     <main>
       {/* Hero */}

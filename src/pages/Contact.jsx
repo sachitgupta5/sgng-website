@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send, MessageCircle } from 'lucide-react';
+import usePageMeta from '../hooks/usePageMeta';
 
 const services = [
   'Business Setup Advisory',
@@ -67,6 +68,7 @@ function validate(data) {
 }
 
 export default function Contact() {
+  usePageMeta("Contact Us", "Get in touch with SGNG & Associates — New Delhi office, phone, email, and inquiry form for all your financial service needs.");
   const [formData, setFormData] = useState(initialFormData);
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);

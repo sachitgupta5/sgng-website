@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import usePageMeta from '../hooks/usePageMeta';
 import {
   TrendingUp,
   Scale,
@@ -63,6 +64,7 @@ const openings = [
 ];
 
 function Career() {
+  usePageMeta("Careers", "Join SGNG & Associates — explore career opportunities in audit, taxation, advisory, and more at a leading CA firm.");
   return (
     <div>
       {/* Hero */}
