@@ -74,13 +74,13 @@ const values = [
 ];
 
 const countries = [
-  { flag: "\u{1F1EE}\u{1F1F3}", name: "India",     note: "Pan-India presence across 5 states"           },
-  { flag: "\u{1F1E6}\u{1F1EA}", name: "UAE",       note: "VAT, Corporate Tax, Free Zone compliance"     },
-  { flag: "\u{1F1FA}\u{1F1F8}", name: "USA",       note: "Federal & State tax, IRS compliance"          },
-  { flag: "\u{1F1E8}\u{1F1E6}", name: "Canada",    note: "CRA filings, GST/HST, payroll"               },
-  { flag: "\u{1F1EC}\u{1F1E7}", name: "UK",        note: "HMRC, VAT, Companies House filings"           },
-  { flag: "\u{1F1F8}\u{1F1EC}", name: "Singapore", note: "IRAS, GST, ACRA compliance"                   },
-  { flag: "\u{1F1E6}\u{1F1FA}", name: "Australia", note: "ATO, GST, BAS, ASIC compliance"               },
+  { name: "India",     note: "Pan-India presence across 5 states"       },
+  { name: "UAE",       note: "VAT, Corporate Tax, Free Zone compliance" },
+  { name: "USA",       note: "Federal & State tax, IRS compliance"      },
+  { name: "Canada",    note: "CRA filings, GST/HST, payroll"           },
+  { name: "UK",        note: "HMRC, VAT, Companies House filings"       },
+  { name: "Singapore", note: "IRAS, GST, ACRA compliance"               },
+  { name: "Australia", note: "ATO, GST, BAS, ASIC compliance"           },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -358,12 +358,14 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-7">
-            {countries.map(({ flag, name, note }) => (
+            {countries.map(({ name, note }) => (
               <div
                 key={name}
                 className="group flex flex-col items-center rounded-xl border border-primary-100 bg-primary-50/40 p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-accent-500/40 hover:bg-white hover:shadow-lg hover:shadow-primary-500/8"
               >
-                <span className="text-3xl transition-transform duration-300 group-hover:scale-110">{flag}</span>
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent-500/10 transition-colors duration-300 group-hover:bg-accent-500/20">
+                  <MapPin className="h-5 w-5 text-accent-600" />
+                </div>
                 <h3 className="mt-3 text-sm font-bold text-primary-900">{name}</h3>
                 <p className="mt-1 text-[10px] leading-snug text-primary-600/60">{note}</p>
               </div>
