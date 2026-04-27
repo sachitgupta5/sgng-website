@@ -29,7 +29,7 @@ const coreValues = [
 ];
 
 function AboutVision() {
-  usePageMeta("Our Vision & Mission", "Discover the vision, mission, and core values driving SGNG & Associates — seeing invisible, achieving impossible.");
+  usePageMeta("Our Vision & Mission", "Discover the vision, mission, and core values driving SGNG & Associates (I) — seeing invisible, achieving impossible.");
   return (
     <div>
       {/* Hero Banner */}
@@ -73,7 +73,7 @@ function AboutVision() {
               <p className="mt-6 text-lg leading-relaxed text-primary-700/80">
                 Our vision is to raise benchmarks with every assignment by imparting knowledge with a
                 goal to provide timely deliverable which makes us victorious in achieving
-                client&apos;s satisfaction adding to SGNG &amp; Associates as a professional firm.
+                client&apos;s satisfaction adding to SGNG &amp; Associates (I) as a professional firm.
               </p>
             </div>
           </div>

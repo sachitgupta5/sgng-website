@@ -64,7 +64,7 @@ const industries = [
 ];
 
 function Industries() {
-  usePageMeta("Industries We Serve", "SGNG & Associates serves restaurants, transport, travel, manufacturing, forex, retail, banking, and more with tailored financial solutions.");
+  usePageMeta("Industries We Serve", "SGNG & Associates (I) serves restaurants, transport, travel, manufacturing, forex, retail, banking, and more with tailored financial solutions.");
   return (
     <main>
       {/* Hero */}

@@ -114,7 +114,7 @@ const learningAreas = [
 function Career() {
   usePageMeta(
     'Careers',
-    'Join SGNG & Associates — build a career in audit, taxation, GST, advisory, and more at a tech-enabled CA firm that invests in your growth.'
+    'Join SGNG & Associates (I) — build a career in audit, taxation, GST, advisory, and more at a tech-enabled CA firm that invests in your growth.'
   );
 
   return (

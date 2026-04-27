@@ -68,11 +68,12 @@ function validate(data) {
 }
 
 export default function Contact() {
-  usePageMeta("Contact Us", "Get in touch with SGNG & Associates — New Delhi office, phone, email, and inquiry form for all your financial service needs.");
+  usePageMeta("Contact Us", "Get in touch with SGNG & Associates (I) — New Delhi office, phone, email, and inquiry form for all your financial service needs.");
   const [formData, setFormData] = useState(initialFormData);
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -94,6 +95,7 @@ export default function Contact() {
       return;
     }
     setIsSubmitting(true);
+    setSubmitError('');
 
     const payload = new FormData();
     payload.append('access_key', 'YOUR_ACCESS_KEY');
@@ -115,11 +117,11 @@ export default function Contact() {
         setSubmitted(true);
         setFormData(initialFormData);
         setErrors({});
+      } else {
+        setSubmitError(result.message || 'Submission failed. Please try again or email info@sgng.in directly.');
       }
     } catch {
-      setSubmitted(true);
-      setFormData(initialFormData);
-      setErrors({});
+      setSubmitError('Network error. Please try again or email info@sgng.in directly.');
     } finally {
       setIsSubmitting(false);
     }
@@ -181,6 +183,12 @@ export default function Contact() {
                         </p>
                       </div>
                     </div>
+                  </div>
+                )}
+
+                {submitError && (
+                  <div className="mt-6 rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-700">
+                    {submitError}
                   </div>
                 )}
 

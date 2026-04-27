@@ -155,7 +155,7 @@ export default function Home() {
           <div className="animate-fade-in-up mb-6 flex items-center gap-3">
             <span className="h-px w-8 bg-accent-500/50" />
             <p className="gold-shimmer text-sm font-bold uppercase tracking-[0.3em] sm:text-base">
-              SGNG &amp; Associates
+              SGNG &amp; Associates (I)
             </p>
             <span className="h-px w-8 bg-accent-500/50" />
           </div>
@@ -471,7 +471,7 @@ export default function Home() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-primary-100/70">
-            Partner with SGNG &amp; Associates for expert financial guidance tailored to your needs
+            Partner with SGNG &amp; Associates (I) for expert financial guidance tailored to your needs
             — from compliance to strategy, we have you covered.
           </p>
 

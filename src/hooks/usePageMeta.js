@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const BASE = "SGNG & Associates | Chartered Accountants";
+const BASE = "SGNG & Associates (I) | Chartered Accountants";
 
 export default function usePageMeta(title, description) {
   useEffect(() => {

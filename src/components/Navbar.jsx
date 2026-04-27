@@ -243,7 +243,7 @@ export default function Navbar() {
                   isScrolled ? "text-primary-300" : "text-white/70"
                 }`}
               >
-                &amp; Associates
+                &amp; Associates (I)
               </span>
             </div>
             <span

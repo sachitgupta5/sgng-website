@@ -14,7 +14,7 @@ export default function Login() {
         {/* Logo */}
         <div className="mb-8 text-center">
           <h1 className="font-serif text-3xl font-bold text-white">
-            SGNG <span className="text-accent-500">&amp;</span> Associates
+            SGNG <span className="text-accent-500">&amp;</span> Associates (I)
           </h1>
           <p className="mt-2 text-sm text-white/50">Internal Team Portal</p>
         </div>

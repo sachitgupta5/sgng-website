@@ -99,7 +99,7 @@ const services = [
 ];
 
 export default function Services() {
-  usePageMeta("Our Services", "Explore 13+ professional services including taxation, audit, GST, business setup, forensic accounting, AI advisory, and more from SGNG & Associates.");
+  usePageMeta("Our Services", "Explore 13+ professional services including taxation, audit, GST, business setup, forensic accounting, AI advisory, and more from SGNG & Associates (I).");
   return (
     <main>
       <section className="hero-gradient py-12 text-center lg:py-16">

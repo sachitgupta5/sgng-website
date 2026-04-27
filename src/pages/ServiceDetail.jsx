@@ -7,7 +7,7 @@ const serviceData = {
     title: 'Business Setup Advisory',
     tagline: 'Expert guidance for company formation and regulatory approvals across India.',
     overview:
-      'SGNG & Associates provides comprehensive business setup advisory services to help entrepreneurs and businesses establish their presence in India. From entry strategy to regulatory approvals, we handle every aspect of business formation.',
+      'SGNG & Associates (I) provides comprehensive business setup advisory services to help entrepreneurs and businesses establish their presence in India. From entry strategy to regulatory approvals, we handle every aspect of business formation.',
     sections: [
       {
         heading: 'Entry Strategy',

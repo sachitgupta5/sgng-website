@@ -69,7 +69,7 @@ const highlights = [
 ];
 
 function AboutTeam() {
-  usePageMeta("Our Team", "Meet the leadership team at SGNG & Associates — experienced Chartered Accountants, SOX experts, and advisors driving client success.");
+  usePageMeta("Our Team", "Meet the leadership team at SGNG & Associates (I) — experienced Chartered Accountants, SOX experts, and advisors driving client success.");
   return (
     <div>
       {/* Hero Banner */}

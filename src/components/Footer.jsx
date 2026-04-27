@@ -61,7 +61,7 @@ function Footer() {
           {/* ── Column 1 — About Us ── */}
           <div className="sm:col-span-2 lg:col-span-1">
             <h3 className="font-serif text-2xl font-bold leading-tight text-accent-500">
-              SGNG<span className="text-primary-50"> &amp; Associates</span>
+              SGNG<span className="text-primary-50"> &amp; Associates (I)</span>
             </h3>
 
             <p className="mt-5 text-sm leading-relaxed text-primary-100/70">
@@ -175,7 +175,7 @@ function Footer() {
       <div className="border-t border-primary-100/10">
         <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
           <p className="text-center text-sm text-primary-100/40">
-            &copy; 2024 SGNG &amp; Associates. All Rights Reserved.
+            &copy; 2024 SGNG &amp; Associates (I). All Rights Reserved.
           </p>
         </div>
       </div>

@@ -73,7 +73,7 @@ const regulatoryResources = [
 export default function Resources() {
   usePageMeta(
     "Resources & Opportunities",
-    "Useful regulatory links, ICAI opportunities, and professional resources curated by SGNG & Associates for businesses and CA professionals."
+    "Useful regulatory links, ICAI opportunities, and professional resources curated by SGNG & Associates (I) for businesses and CA professionals."
   );
 
   return (

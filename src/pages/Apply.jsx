@@ -43,7 +43,7 @@ function validate(data, resume) {
 export default function Apply() {
   usePageMeta(
     'Apply Now',
-    'Submit your application to join SGNG & Associates — upload your resume and apply for open positions in audit, tax, GST, and advisory.'
+    'Submit your application to join SGNG & Associates (I) — upload your resume and apply for open positions in audit, tax, GST, and advisory.'
   );
 
   const [searchParams] = useSearchParams();
@@ -171,7 +171,7 @@ export default function Apply() {
                 </div>
                 <h2 className="font-serif text-2xl font-bold text-primary-900">Application Submitted!</h2>
                 <p className="mx-auto mt-3 max-w-md text-primary-700/70">
-                  Thank you for your interest in joining SGNG & Associates. Our team will review
+                  Thank you for your interest in joining SGNG & Associates (I). Our team will review
                   your application and get back to you shortly.
                 </p>
                 <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
@@ -356,7 +356,7 @@ export default function Apply() {
                       rows={4}
                       value={formData.coverLetter}
                       onChange={handleChange}
-                      placeholder="Tell us why you'd like to join SGNG & Associates..."
+                      placeholder="Tell us why you'd like to join SGNG & Associates (I)..."
                       className="mt-1.5 block w-full resize-y rounded-lg border border-primary-200/50 px-4 py-3 text-primary-900 shadow-sm placeholder:text-primary-300 focus:border-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-500/20 transition-colors duration-200"
                     />
                   </div>
