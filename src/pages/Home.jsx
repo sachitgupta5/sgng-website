@@ -162,7 +162,7 @@ export default function Home() {
 
           {/* Value proposition headline */}
           <h1 className="animate-fade-in-up font-serif text-4xl font-bold leading-[1.12] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl">
-            Expert Financial Solutions <br className="hidden sm:block" />
+            Expert Governance &amp; Advisory <br className="hidden sm:block" />
             <span className="gold-shimmer">Trusted Across 7 Nations</span>
           </h1>
 

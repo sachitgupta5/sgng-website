@@ -10,9 +10,6 @@ import {
   Briefcase,
   MapPin,
   ArrowRight,
-  BookOpen,
-  Target,
-  Rocket,
   Send,
   CheckCircle2,
 } from 'lucide-react';
@@ -54,14 +51,6 @@ const pillars = [
     description:
       'Flexible schedules, real work-life balance, and a leadership team that listens. We have built a firm where people stay — not because they have to, but because they want to.',
   },
-];
-
-const growthPath = [
-  { step: 'Intern / Articleship', detail: 'Hands-on exposure to audit, tax, and compliance under expert guidance' },
-  { step: 'Associate', detail: 'Own client deliverables, lead small teams, and build domain expertise' },
-  { step: 'Senior Associate', detail: 'Manage multi-client portfolios, mentor juniors, drive process improvements' },
-  { step: 'Manager / Team Lead', detail: 'Lead service verticals, handle key client relationships, shape firm strategy' },
-  { step: 'Partner Track', detail: 'For exceptional performers — equity participation, leadership, and firm building' },
 ];
 
 const openings = [
@@ -241,57 +230,6 @@ function Career() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Growth Path */}
-      <section className="bg-white py-14 lg:py-20">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="mb-3 flex items-center justify-center gap-3">
-              <span className="h-px w-8 bg-accent-500/60" />
-              <Rocket className="h-4 w-4 text-accent-600" />
-              <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-accent-600">Career Path</span>
-              <Rocket className="h-4 w-4 text-accent-600" />
-              <span className="h-px w-8 bg-accent-500/60" />
-            </div>
-            <h2 className="font-serif text-3xl font-bold text-primary-900 sm:text-4xl">
-              Your Growth Trajectory
-            </h2>
-            <p className="mx-auto mt-4 max-w-xl text-primary-700/70">
-              Clear milestones, real ownership, and a leadership team invested in your success.
-            </p>
-          </div>
-
-          <div className="relative mt-14">
-            {/* Vertical line */}
-            <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-accent-500 via-primary-300 to-accent-500 sm:left-1/2" />
-
-            {growthPath.map((item, i) => (
-              <div
-                key={item.step}
-                className={`relative mb-10 last:mb-0 flex items-start gap-6 ${
-                  i % 2 === 0 ? 'sm:flex-row' : 'sm:flex-row-reverse'
-                }`}
-              >
-                {/* Dot */}
-                <div className="absolute left-6 sm:left-1/2 -translate-x-1/2 flex h-12 w-12 items-center justify-center rounded-full border-4 border-white bg-accent-500 text-sm font-bold text-primary-900 shadow-lg z-10">
-                  {i + 1}
-                </div>
-
-                {/* Card */}
-                <div className={`ml-20 sm:ml-0 sm:w-[calc(50%-2rem)] ${i % 2 === 0 ? 'sm:pr-8' : 'sm:pl-8'}`}>
-                  <div className="rounded-xl border border-primary-200/30 bg-white p-5 shadow-sm">
-                    <h3 className="text-base font-bold text-primary-900">{item.step}</h3>
-                    <p className="mt-1.5 text-sm text-primary-700/70">{item.detail}</p>
-                  </div>
-                </div>
-
-                {/* Spacer for alternating layout */}
-                <div className="hidden sm:block sm:w-[calc(50%-2rem)]" />
-              </div>
-            ))}
           </div>
         </div>
       </section>
