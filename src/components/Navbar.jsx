@@ -80,7 +80,7 @@ function DesktopDropdown({ label, links, isScrolled }) {
       <button
         type="button"
         onClick={() => setOpen((prev) => !prev)}
-        className={`flex items-center gap-1 px-3 py-2 rounded-md text-sm font-medium tracking-wide transition-all duration-300 cursor-pointer ${
+        className={`flex items-center gap-1 px-2.5 py-1.5 rounded-md text-xs font-medium tracking-wide transition-all duration-300 cursor-pointer ${
           isScrolled
             ? "text-primary-800 hover:text-accent-600 hover:bg-primary-50/80"
             : "text-white/90 hover:text-white hover:bg-white/10"
@@ -175,7 +175,7 @@ function MobileAccordion({ label, links, onNavigate }) {
 
 function navLinkClasses(isScrolled) {
   return ({ isActive }) =>
-    `px-3 py-2 rounded-md text-sm font-medium tracking-wide transition-all duration-300 ${
+    `px-2.5 py-1.5 rounded-md text-xs font-medium tracking-wide transition-all duration-300 ${
       isActive
         ? isScrolled
           ? "text-accent-600 bg-primary-50/80"
@@ -226,20 +226,20 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 h-16 lg:h-20">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 h-14 lg:h-16">
         {/* ---- Logo ---- */}
         <Link to="/" className="flex items-center gap-2 shrink-0 group">
           <div className="flex flex-col">
             <div className="flex items-baseline gap-1.5">
               <span
-                className={`text-2xl lg:text-[1.7rem] font-bold tracking-tight font-serif transition-colors duration-500 ${
+                className={`text-xl lg:text-2xl font-bold tracking-tight font-serif transition-colors duration-500 ${
                   isScrolled ? "text-primary-500" : "text-white"
                 }`}
               >
                 SGNG
               </span>
               <span
-                className={`hidden sm:inline text-sm lg:text-base font-medium transition-colors duration-500 ${
+                className={`hidden sm:inline text-xs lg:text-sm font-medium transition-colors duration-500 ${
                   isScrolled ? "text-primary-300" : "text-white/70"
                 }`}
               >
@@ -247,7 +247,7 @@ export default function Navbar() {
               </span>
             </div>
             <span
-              className={`hidden sm:block text-[10px] tracking-[0.18em] uppercase transition-colors duration-500 leading-tight ${
+              className={`hidden sm:block text-[9px] tracking-[0.15em] uppercase transition-colors duration-500 leading-tight ${
                 isScrolled ? "text-primary-300/80" : "text-white/50"
               }`}
             >
@@ -301,7 +301,7 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center gap-2">
           <Link
             to="/contact"
-            className={`inline-flex items-center px-6 py-2.5 rounded-lg text-sm font-semibold tracking-wide transition-all duration-500 ${
+            className={`inline-flex items-center px-5 py-2 rounded-lg text-xs font-semibold tracking-wide transition-all duration-500 ${
               isScrolled
                 ? "bg-accent-500 text-primary-900 hover:bg-accent-600 hover:text-white shadow-[0_4px_20px_-4px_rgba(255,215,0,0.5)]"
                 : "bg-white/95 text-primary-500 hover:bg-white shadow-[0_4px_20px_-4px_rgba(255,255,255,0.3)]"
@@ -339,7 +339,7 @@ export default function Navbar() {
 
       {/* ---- Mobile overlay (dim background) ---- */}
       <div
-        className={`fixed inset-0 top-16 z-40 bg-primary-900/40 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
+        className={`fixed inset-0 top-14 z-40 bg-primary-900/40 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
           mobileOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
@@ -350,7 +350,7 @@ export default function Navbar() {
 
       {/* ---- Mobile slide-in panel ---- */}
       <div
-        className={`fixed top-16 right-0 z-50 h-[calc(100dvh-4rem)] w-80 max-w-[85vw] bg-gradient-to-b from-primary-50 to-white shadow-[-8px_0_40px_-10px_rgba(139,69,19,0.2)] transition-transform duration-400 ease-in-out lg:hidden overflow-y-auto ${
+        className={`fixed top-14 right-0 z-50 h-[calc(100dvh-3.5rem)] w-80 max-w-[85vw] bg-gradient-to-b from-primary-50 to-white shadow-[-8px_0_40px_-10px_rgba(139,69,19,0.2)] transition-transform duration-400 ease-in-out lg:hidden overflow-y-auto ${
           mobileOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

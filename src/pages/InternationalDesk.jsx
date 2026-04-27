@@ -209,7 +209,7 @@ export default function InternationalDesk() {
       </section>
 
       {/* Country Tabs */}
-      <section className="sticky top-16 z-30 border-b border-primary-200/40 bg-white/95 backdrop-blur-md lg:top-20">
+      <section className="sticky top-14 z-30 border-b border-primary-200/40 bg-white/95 backdrop-blur-md lg:top-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex gap-1 overflow-x-auto py-2 scrollbar-hide">
             {countries.map((c) => (
