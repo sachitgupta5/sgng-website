@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send, MessageCircle } from 'lucide-react';
 import usePageMeta from '../hooks/usePageMeta';
+import { APPS_SCRIPT_URL, countryCodes } from '../config/formsConfig';
 
 const services = [
   'Business Setup Advisory',
@@ -50,6 +51,7 @@ const offices = [
 const initialFormData = {
   fullName: '',
   email: '',
+  countryCode: '+91',
   phone: '',
   service: '',
   message: '',
@@ -61,7 +63,7 @@ function validate(data) {
   if (!data.email.trim()) errors.email = 'Email address is required.';
   else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email))
     errors.email = 'Please enter a valid email address.';
-  if (data.phone && !/^[+\d\s()-]{7,20}$/.test(data.phone))
+  if (data.phone && !/^\d{4,15}$/.test(data.phone.replace(/[\s()-]/g, '')))
     errors.phone = 'Please enter a valid phone number.';
   if (!data.message.trim()) errors.message = 'Message is required.';
   return errors;
@@ -97,29 +99,28 @@ export default function Contact() {
     setIsSubmitting(true);
     setSubmitError('');
 
-    const payload = new FormData();
-    payload.append('access_key', 'YOUR_ACCESS_KEY');
-    payload.append('subject', `New Inquiry: ${formData.service || 'General'}`);
-    payload.append('from_name', formData.fullName);
-    payload.append('Full Name', formData.fullName);
-    payload.append('Email', formData.email);
-    payload.append('Phone', formData.phone || 'Not provided');
-    payload.append('Service Interested In', formData.service || 'Not specified');
-    payload.append('Message', formData.message);
+    const fullPhone = formData.phone
+      ? `${formData.countryCode} ${formData.phone}`
+      : '';
 
     try {
-      const res = await fetch('https://api.web3forms.com/submit', {
+      await fetch(APPS_SCRIPT_URL, {
         method: 'POST',
-        body: payload,
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain' },
+        body: JSON.stringify({
+          formType:  'contact',
+          fullName:  formData.fullName,
+          email:     formData.email,
+          phone:     fullPhone || 'Not provided',
+          service:   formData.service || 'Not specified',
+          message:   formData.message,
+        }),
       });
-      const result = await res.json();
-      if (result.success) {
-        setSubmitted(true);
-        setFormData(initialFormData);
-        setErrors({});
-      } else {
-        setSubmitError(result.message || 'Submission failed. Please try again or email info@sgng.in directly.');
-      }
+      // no-cors returns opaque response — assume success
+      setSubmitted(true);
+      setFormData(initialFormData);
+      setErrors({});
     } catch {
       setSubmitError('Network error. Please try again or email info@sgng.in directly.');
     } finally {
@@ -232,18 +233,32 @@ export default function Contact() {
 
                   <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-primary-800">
+                      <label className="block text-sm font-medium text-primary-800">
                         Phone Number
                       </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        placeholder="+91 XXXXX XXXXX"
-                        className={inputClasses('phone')}
-                      />
+                      <div className="mt-1.5 flex gap-2">
+                        <select
+                          name="countryCode"
+                          value={formData.countryCode}
+                          onChange={handleChange}
+                          className="w-36 rounded-lg border border-primary-200/50 bg-white px-3 py-3 text-sm text-primary-900 shadow-sm focus:border-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-500/20 transition-colors duration-200"
+                        >
+                          {countryCodes.map((c) => (
+                            <option key={c.code} value={c.code}>
+                              {c.code} {c.country}
+                            </option>
+                          ))}
+                        </select>
+                        <input
+                          type="tel"
+                          id="phone"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleChange}
+                          placeholder="XXXXX XXXXX"
+                          className={`flex-1 ${inputClasses('phone')}`}
+                        />
+                      </div>
                       {errors.phone && (
                         <p className="mt-1.5 text-sm text-red-600">{errors.phone}</p>
                       )}

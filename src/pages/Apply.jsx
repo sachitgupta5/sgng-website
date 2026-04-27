@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { Upload, Send, CheckCircle2, ArrowLeft, FileText, X } from 'lucide-react';
 import usePageMeta from '../hooks/usePageMeta';
+import { countryCodes } from '../config/formsConfig';
 
 const positions = [
   'Senior Auditor',
@@ -18,6 +19,7 @@ const WEB3FORMS_KEY = 'YOUR_ACCESS_KEY';
 const initialForm = {
   fullName: '',
   email: '',
+  countryCode: '+91',
   phone: '',
   position: '',
   experience: '',
@@ -31,7 +33,7 @@ function validate(data, resume) {
   else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email))
     errors.email = 'Enter a valid email.';
   if (!data.phone.trim()) errors.phone = 'Phone number is required.';
-  else if (!/^[+\d\s()-]{7,20}$/.test(data.phone))
+  else if (!/^\d{4,15}$/.test(data.phone.replace(/[\s()-]/g, '')))
     errors.phone = 'Enter a valid phone number.';
   if (!data.position) errors.position = 'Select a position.';
   if (!resume) errors.resume = 'Please upload your resume.';
@@ -96,7 +98,7 @@ export default function Apply() {
     payload.append('from_name', formData.fullName);
     payload.append('Full Name', formData.fullName);
     payload.append('Email', formData.email);
-    payload.append('Phone', formData.phone);
+    payload.append('Phone', `${formData.countryCode} ${formData.phone}`);
     payload.append('Position', formData.position);
     payload.append('Experience', formData.experience || 'Not specified');
     payload.append('Cover Letter', formData.coverLetter || 'Not provided');
@@ -242,18 +244,32 @@ export default function Apply() {
                   {/* Phone + Position */}
                   <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-primary-800">
+                      <label className="block text-sm font-medium text-primary-800">
                         Phone <span className="text-red-500">*</span>
                       </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        placeholder="+91 XXXXX XXXXX"
-                        className={inputCls('phone')}
-                      />
+                      <div className="mt-1.5 flex gap-2">
+                        <select
+                          name="countryCode"
+                          value={formData.countryCode}
+                          onChange={handleChange}
+                          className="w-36 rounded-lg border border-primary-200/50 bg-white px-3 py-3 text-sm text-primary-900 shadow-sm focus:border-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-500/20 transition-colors duration-200"
+                        >
+                          {countryCodes.map((c) => (
+                            <option key={c.code} value={c.code}>
+                              {c.code} {c.country}
+                            </option>
+                          ))}
+                        </select>
+                        <input
+                          type="tel"
+                          id="phone"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleChange}
+                          placeholder="XXXXX XXXXX"
+                          className={`flex-1 ${inputCls('phone')}`}
+                        />
+                      </div>
                       {errors.phone && <p className="mt-1.5 text-sm text-red-600">{errors.phone}</p>}
                     </div>
                     <div>
