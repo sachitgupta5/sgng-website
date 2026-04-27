@@ -11,6 +11,7 @@ const quickLinks = [
   { name: "Industries", path: "/industries" },
   { name: "Our Services", path: "/services" },
   { name: "Career", path: "/career" },
+  { name: "International Desk", path: "/international-desk" },
   { name: "Resources", path: "/resources" },
   { name: "Contact Us", path: "/contact" },
 ];

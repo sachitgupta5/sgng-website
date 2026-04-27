@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const BASE = "SGNG & Associates (I) | Chartered Accountants";
+const BASE = "SGNG & Associates (I) | Best Chartered Accountant Delhi | CPA India | Trusted CA";
 
 export default function usePageMeta(title, description) {
   useEffect(() => {

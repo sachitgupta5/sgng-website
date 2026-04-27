@@ -120,3 +120,14 @@ body {
   transform: translateY(0) scale(1) perspective(800px) rotateX(0deg);
   filter: blur(0px);
 }
+
+@keyframes bounce-gentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.animate-bounce-gentle {
+  animation: bounce-gentle 2s ease-in-out infinite;
+}
+.animate-bounce-gentle:hover {
+  animation: none;
+}

@@ -284,6 +284,10 @@ export default function Navbar() {
             Career
           </NavLink>
 
+          <NavLink to="/international-desk" className={navLinkClasses(isScrolled)}>
+            International Desk
+          </NavLink>
+
           <NavLink to="/resources" className={navLinkClasses(isScrolled)}>
             Resources
           </NavLink>
@@ -402,6 +406,21 @@ export default function Navbar() {
             }
           >
             Career
+          </NavLink>
+
+          {/* International Desk */}
+          <NavLink
+            to="/international-desk"
+            onClick={closeMobile}
+            className={({ isActive }) =>
+              `px-6 py-4 text-base font-semibold border-b border-primary-100/60 transition-colors duration-200 ${
+                isActive
+                  ? "text-accent-600 bg-primary-50/60"
+                  : "text-primary-800 hover:bg-primary-50/60 hover:text-accent-600"
+              }`
+            }
+          >
+            International Desk
           </NavLink>
 
           {/* Resources */}

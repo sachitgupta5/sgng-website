@@ -240,6 +240,62 @@ export default function Home() {
       </section>
 
       {/* ============================================================ */}
+      {/*  TRUST BADGES                                                */}
+      {/* ============================================================ */}
+      <section className="section-gradient border-t border-primary-200/30 py-6">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-14">
+            {/* ICAI Badge */}
+            <div className="flex items-center gap-3">
+              <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-primary-500/30 bg-white shadow-sm">
+                <svg viewBox="0 0 40 40" className="h-9 w-9" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20" cy="20" r="18" fill="none" stroke="#8B4513" strokeWidth="2"/>
+                  <text x="20" y="16" textAnchor="middle" fill="#8B4513" fontSize="7" fontWeight="bold" fontFamily="serif">ICAI</text>
+                  <text x="20" y="24" textAnchor="middle" fill="#8B4513" fontSize="4" fontFamily="sans-serif">EST. 1949</text>
+                  <path d="M10 28 L20 32 L30 28" fill="none" stroke="#FFD700" strokeWidth="1.5"/>
+                </svg>
+              </div>
+              <div>
+                <p className="text-sm font-bold text-primary-900">Trusted by ICAI</p>
+                <p className="text-[10px] text-primary-600/60">Institute of Chartered Accountants of India</p>
+              </div>
+            </div>
+
+            <div className="hidden h-8 w-px bg-primary-200/50 sm:block" />
+
+            {/* ISO Badge */}
+            <div className="flex items-center gap-3">
+              <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-accent-500/30 bg-white shadow-sm">
+                <svg viewBox="0 0 40 40" className="h-9 w-9" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20" cy="20" r="18" fill="none" stroke="#DAA520" strokeWidth="2"/>
+                  <text x="20" y="17" textAnchor="middle" fill="#8B4513" fontSize="7" fontWeight="bold" fontFamily="sans-serif">ISO</text>
+                  <text x="20" y="26" textAnchor="middle" fill="#DAA520" fontSize="5" fontWeight="bold" fontFamily="sans-serif">9001</text>
+                  <text x="20" y="33" textAnchor="middle" fill="#8B4513" fontSize="4" fontFamily="sans-serif">:2015</text>
+                </svg>
+              </div>
+              <div>
+                <p className="text-sm font-bold text-primary-900">ISO 9001:2015</p>
+                <p className="text-[10px] text-primary-600/60">Quality Management Certified</p>
+              </div>
+            </div>
+
+            <div className="hidden h-8 w-px bg-primary-200/50 sm:block" />
+
+            {/* CA Firm Badge */}
+            <div className="flex items-center gap-3">
+              <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-primary-500/30 bg-white shadow-sm">
+                <ShieldCheck className="h-7 w-7 text-primary-500" />
+              </div>
+              <div>
+                <p className="text-sm font-bold text-primary-900">Fully Certified</p>
+                <p className="text-[10px] text-primary-600/60">Chartered Accountancy Firm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================================ */}
       {/*  WHO WE ARE                                                  */}
       {/* ============================================================ */}
       <section className="bg-white py-16 lg:py-24">

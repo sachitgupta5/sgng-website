@@ -16,6 +16,7 @@ const ServiceDetail = lazy(() => import('./pages/ServiceDetail'))
 const Login = lazy(() => import('./pages/Login'))
 const Resources = lazy(() => import('./pages/Resources'))
 const Apply = lazy(() => import('./pages/Apply'))
+const InternationalDesk = lazy(() => import('./pages/InternationalDesk'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 
 function Loading() {
@@ -48,6 +49,7 @@ function App() {
             <Route path="/apply" element={<Apply />} />
             <Route path="/login" element={<Login />} />
             <Route path="/resources" element={<Resources />} />
+            <Route path="/international-desk" element={<InternationalDesk />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
