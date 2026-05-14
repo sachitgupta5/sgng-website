@@ -449,7 +449,7 @@ export default function Contact() {
               <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-accent-500/30 bg-accent-500/10 px-4 py-1.5">
                 <Sparkles className="h-4 w-4 text-accent-600" />
                 <span className="text-xs font-bold uppercase tracking-widest text-accent-600">
-                  Free 30-Min Session
+                  Book a Consultation
                 </span>
               </div>
 
@@ -473,7 +473,7 @@ export default function Contact() {
                   className="group inline-flex items-center gap-3 rounded-xl bg-primary-500 px-8 py-4 text-base font-bold text-white shadow-xl shadow-primary-500/25 transition-all duration-300 hover:bg-primary-600 hover:shadow-2xl hover:shadow-primary-500/35 hover:gap-4"
                 >
                   <CalendarCheck className="h-5 w-5" />
-                  Book Your Free Consultation
+                  Book a Consultation
                   <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </a>
               </div>
