@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Send, MessageCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, MessageCircle, CalendarCheck, Video, ArrowRight, Sparkles } from 'lucide-react';
 import usePageMeta from '../hooks/usePageMeta';
 import { APPS_SCRIPT_URL, countryCodes } from '../config/formsConfig';
 
@@ -425,8 +425,140 @@ export default function Contact() {
         </div>
       </section>
 
+      {/* Book a Consultation */}
+      <section className="relative overflow-hidden bg-white py-14 lg:py-20">
+        {/* Background pattern */}
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute -top-20 -right-20 h-80 w-80 rounded-full bg-accent-500/5 blur-3xl" />
+          <div className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-primary-500/5 blur-3xl" />
+          <div
+            className="absolute inset-0 opacity-[0.02]"
+            style={{
+              backgroundImage:
+                'linear-gradient(rgba(139,69,19,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(139,69,19,0.4) 1px, transparent 1px)',
+              backgroundSize: '40px 40px',
+            }}
+          />
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid items-center gap-10 lg:grid-cols-2">
+
+            {/* Left — text & CTA */}
+            <div>
+              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-accent-500/30 bg-accent-500/10 px-4 py-1.5">
+                <Sparkles className="h-4 w-4 text-accent-600" />
+                <span className="text-xs font-bold uppercase tracking-widest text-accent-600">
+                  Free 30-Min Session
+                </span>
+              </div>
+
+              <h2 className="font-serif text-3xl font-bold leading-tight text-primary-900 sm:text-4xl lg:text-5xl">
+                Ask an Expert,{' '}
+                <span className="text-accent-600">Get Answers Now</span>
+              </h2>
+
+              <p className="mt-5 max-w-lg text-lg leading-relaxed text-primary-700/80">
+                Skip the back-and-forth. Book a live consultation with our Chartered
+                Accountants and get personalised advice on tax, compliance, business setup,
+                or any financial query &mdash; all in one call.
+              </p>
+
+              {/* Value props */}
+              <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                {[
+                  { icon: CalendarCheck, text: 'Pick a slot that works for you' },
+                  { icon: Video, text: 'Google Meet link auto-generated' },
+                  { icon: Mail, text: 'Calendar invite sent instantly' },
+                  { icon: Clock, text: 'No obligation, no hidden fees' },
+                ].map(({ icon: Icon, text }) => (
+                  <div key={text} className="flex items-center gap-3">
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary-50 text-primary-500">
+                      <Icon className="h-4 w-4" />
+                    </div>
+                    <span className="text-sm font-medium text-primary-800">{text}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTA button */}
+              <div className="mt-10">
+                <a
+                  href="https://calendar.app.google/mbSQb5cabEj4oj7y9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-3 rounded-xl bg-primary-500 px-8 py-4 text-base font-bold text-white shadow-xl shadow-primary-500/25 transition-all duration-300 hover:bg-primary-600 hover:shadow-2xl hover:shadow-primary-500/35 hover:gap-4"
+                >
+                  <CalendarCheck className="h-5 w-5" />
+                  Book Your Free Consultation
+                  <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                </a>
+                <p className="mt-3 text-xs text-primary-500/60">
+                  Powered by Google Calendar &bull; Instant confirmation
+                </p>
+              </div>
+            </div>
+
+            {/* Right — visual card */}
+            <div className="relative flex justify-center lg:justify-end">
+              <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-accent-500/10 via-primary-500/5 to-transparent blur-2xl" />
+              <div className="relative w-full max-w-md rounded-2xl border border-primary-200/40 bg-gradient-to-br from-primary-50 to-white p-8 shadow-2xl sm:p-10">
+                {/* Decorative top bar */}
+                <div className="absolute inset-x-0 top-0 h-1.5 rounded-t-2xl bg-gradient-to-r from-accent-500 via-accent-600 to-primary-500" />
+
+                <div className="mb-6 flex items-center gap-3">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent-500/15">
+                    <Video className="h-6 w-6 text-accent-600" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-bold text-primary-900">Video Consultation</p>
+                    <p className="text-xs text-primary-600/60">via Google Meet</p>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  {/* Mock calendar slots */}
+                  {['Tax & Compliance Query', 'Business Setup Discussion', 'Audit & Assurance Review', 'GST & Regulatory Advice'].map(
+                    (slot, i) => (
+                      <div
+                        key={slot}
+                        className={`flex items-center gap-3 rounded-lg border px-4 py-3 transition-all duration-200 ${
+                          i === 0
+                            ? 'border-accent-500/40 bg-accent-500/5 shadow-sm'
+                            : 'border-primary-100 bg-white'
+                        }`}
+                      >
+                        <div
+                          className={`h-2.5 w-2.5 rounded-full ${
+                            i === 0 ? 'bg-accent-500 shadow-sm shadow-accent-500/50' : 'bg-primary-200'
+                          }`}
+                        />
+                        <span className={`text-sm ${i === 0 ? 'font-semibold text-primary-900' : 'text-primary-600/70'}`}>
+                          {slot}
+                        </span>
+                        {i === 0 && (
+                          <span className="ml-auto rounded-full bg-accent-500 px-2 py-0.5 text-[10px] font-bold text-primary-900">
+                            POPULAR
+                          </span>
+                        )}
+                      </div>
+                    )
+                  )}
+                </div>
+
+                <div className="mt-6 rounded-lg border border-dashed border-primary-200 bg-primary-50/50 p-4 text-center">
+                  <p className="text-xs font-medium text-primary-600/70">
+                    Available slots updated in real-time from our calendar
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Office Locations */}
-      <section className="bg-white py-10 lg:py-14">
+      <section className="section-gradient py-10 lg:py-14">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="font-serif text-3xl font-bold text-primary-900 sm:text-4xl">
