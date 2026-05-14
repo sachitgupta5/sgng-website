@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Send, MessageCircle, CalendarCheck, Video, ArrowRight, Sparkles } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, MessageCircle, CalendarCheck, ArrowRight, Sparkles } from 'lucide-react';
 import usePageMeta from '../hooks/usePageMeta';
 import { APPS_SCRIPT_URL, countryCodes } from '../config/formsConfig';
 
@@ -464,23 +464,6 @@ export default function Contact() {
                 or any financial query &mdash; all in one call.
               </p>
 
-              {/* Value props */}
-              <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
-                {[
-                  { icon: CalendarCheck, text: 'Pick a slot that works for you' },
-                  { icon: Video, text: 'Google Meet link auto-generated' },
-                  { icon: Mail, text: 'Calendar invite sent instantly' },
-                  { icon: Clock, text: 'No obligation, no hidden fees' },
-                ].map(({ icon: Icon, text }) => (
-                  <div key={text} className="flex items-center gap-3">
-                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary-50 text-primary-500">
-                      <Icon className="h-4 w-4" />
-                    </div>
-                    <span className="text-sm font-medium text-primary-800">{text}</span>
-                  </div>
-                ))}
-              </div>
-
               {/* CTA button */}
               <div className="mt-10">
                 <a
@@ -493,9 +476,6 @@ export default function Contact() {
                   Book Your Free Consultation
                   <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </a>
-                <p className="mt-3 text-xs text-primary-500/60">
-                  Powered by Google Calendar &bull; Instant confirmation
-                </p>
               </div>
             </div>
 
@@ -506,17 +486,7 @@ export default function Contact() {
                 {/* Decorative top bar */}
                 <div className="absolute inset-x-0 top-0 h-1.5 rounded-t-2xl bg-gradient-to-r from-accent-500 via-accent-600 to-primary-500" />
 
-                <div className="mb-6 flex items-center gap-3">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent-500/15">
-                    <Video className="h-6 w-6 text-accent-600" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-bold text-primary-900">Video Consultation</p>
-                    <p className="text-xs text-primary-600/60">via Google Meet</p>
-                  </div>
-                </div>
-
-                <div className="space-y-4">
+                <div className="space-y-4 mt-2">
                   {/* Mock calendar slots */}
                   {['Tax & Compliance Query', 'Business Setup Discussion', 'Audit & Assurance Review', 'GST & Regulatory Advice'].map(
                     (slot, i) => (
